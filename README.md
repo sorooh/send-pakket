@@ -8,6 +8,33 @@
 
 ## ⚡ One-Click Deployment
 
+### Step 1: Upload to GitHub First! 📤
+
+**Before using the deployment buttons, you need to upload this project to GitHub:**
+
+```bash
+# Run the upload script
+./push_to_github.bat
+```
+
+Or manually:
+1. Create a new repository on GitHub (public or private)
+2. Copy the repository URL
+3. Run these commands:
+```bash
+git remote add origin YOUR_REPOSITORY_URL
+git push -u origin master
+```
+
+### Step 2: Replace YOUR_USERNAME in Deployment Buttons
+
+After uploading to GitHub:
+1. Open this README.md file
+2. Replace `YOUR_USERNAME` with your actual GitHub username
+3. Commit and push the changes
+
+### Step 3: Deploy Instantly! 🚀
+
 ### Option 1: Railway (Recommended - Easiest) 🚂
 1. Click the **"Deploy to Railway"** button above
 2. Connect your GitHub account

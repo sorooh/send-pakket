@@ -1,8 +1,8 @@
 # 🚀 Send-Pakket Platform - One-Click Deployment
 
-[![Deploy to Railway](https://railway.app/button.svg)](https://railway.app/new/template?template=https://github.com/YOUR_USERNAME/sendpakket-platform)
-[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/YOUR_USERNAME/sendpakket-platform)
-[![Deploy to Fly.io](https://fly.io/button.svg)](https://fly.io/launch/github/YOUR_USERNAME/sendpakket-platform)
+[![Deploy to Railway](https://railway.app/button.svg)](https://railway.app/new/template?template=https://github.com/sorooh/send-pakket)
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/sorooh/send-pakket)
+[![Deploy to Fly.io](https://fly.io/button.svg)](https://fly.io/launch/github/sorooh/send-pakket)
 
 **Send-Pakket: European Shipping Platform** - Competing with Sendcloud through superior architecture and global scalability.
 

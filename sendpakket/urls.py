@@ -33,6 +33,9 @@ def health_check(request):
 urlpatterns = [
     path('admin/', admin.site.urls),
 
+    # Rosetta translation interface
+    path('rosetta/', include('rosetta.urls')),
+
     # Health check endpoint
     path('health/', health_check, name='health_check'),
 
@@ -55,6 +58,6 @@ urlpatterns = [
     # Platform Core API
     path('api/', include('platform_core.urls')),
 
-    # Other apps will be added here
-    # path('api/analytics/', include('analytics.urls')),
+    # Analytics API
+    path('api/analytics/', include('analytics.urls')),
 ]

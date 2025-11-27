@@ -274,3 +274,216 @@ class CarrierWebhookViewSet(viewsets.ModelViewSet):
         # Here you would implement actual webhook testing
         # For now, return success
         return Response({'status': 'success', 'message': 'Webhook test sent'})
+
+
+class CarrierAnalyticsViewSet(viewsets.ViewSet):
+    """ViewSet for carrier analytics and performance"""
+
+    permission_classes = [IsAuthenticated]
+
+    @action(detail=True, methods=['get'])
+    def performance(self, request, pk=None):
+        """Get performance statistics for a carrier"""
+        from .services import CarrierService
+
+        try:
+            carrier = Carrier.objects.get(pk=pk)
+        except Carrier.DoesNotExist:
+            return Response({'error': 'Carrier not found'}, status=404)
+
+        days = int(request.query_params.get('days', 30))
+        stats = CarrierService.get_carrier_performance_stats(carrier, days)
+
+        return Response({
+            'carrier_id': pk,
+            'carrier_name': carrier.display_name,
+            'period_days': days,
+            'statistics': stats
+        })
+
+    @action(detail=False, methods=['get'])
+    def compare(self, request):
+        """Compare multiple carriers' performance"""
+        from .services import CarrierService
+
+        carrier_ids = request.query_params.getlist('carrier_ids')
+        days = int(request.query_params.get('days', 30))
+
+        if not carrier_ids:
+            return Response({'error': 'carrier_ids parameter required'}, status=400)
+
+        comparison = []
+        for carrier_id in carrier_ids:
+            try:
+                carrier = Carrier.objects.get(pk=carrier_id)
+                stats = CarrierService.get_carrier_performance_stats(carrier, days)
+                comparison.append({
+                    'carrier_id': carrier_id,
+                    'carrier_name': carrier.display_name,
+                    'statistics': stats
+                })
+            except Carrier.DoesNotExist:
+                continue
+
+        return Response({
+            'period_days': days,
+            'carriers': comparison
+        })
+
+
+class CarrierOptimizationViewSet(viewsets.ViewSet):
+    """ViewSet for carrier selection optimization"""
+
+    permission_classes = [IsAuthenticated]
+
+    @action(detail=False, methods=['post'])
+    def get_rates(self, request):
+        """Get shipping rates for multiple carriers"""
+        from .services import CarrierService
+
+        origin_country = request.data.get('origin_country')
+        destination_country = request.data.get('destination_country')
+        weight_kg = request.data.get('weight_kg')
+        dimensions = request.data.get('dimensions', {})
+        preferred_service_type = request.data.get('preferred_service_type')
+        max_results = int(request.data.get('max_results', 5))
+
+        if not all([origin_country, destination_country, weight_kg]):
+            return Response({
+                'error': 'origin_country, destination_country, and weight_kg are required'
+            }, status=400)
+
+        try:
+            weight_kg = float(weight_kg)
+        except ValueError:
+            return Response({'error': 'Invalid weight_kg value'}, status=400)
+
+        rates = CarrierService.get_best_carrier_rates(
+            origin_country, destination_country, weight_kg,
+            dimensions, preferred_service_type, max_results
+        )
+
+        # Serialize the response
+        serialized_rates = []
+        for rate in rates:
+            serialized_rates.append({
+                'carrier_name': rate['carrier_service'].carrier.display_name,
+                'service_name': rate['carrier_service'].display_name,
+                'service_type': rate['service_type'],
+                'cost_price': str(rate['cost_price']),
+                'selling_price': str(rate['selling_price']),
+                'currency': rate['currency'],
+                'estimated_days': rate['estimated_days'],
+                'dimensional_weight': rate.get('dimensional_weight')
+            })
+
+        return Response({
+            'origin_country': origin_country,
+            'destination_country': destination_country,
+            'weight_kg': weight_kg,
+            'rates': serialized_rates
+        })
+
+    @action(detail=False, methods=['post'])
+    def optimize_selection(self, request):
+        """Get optimized carrier selection based on priorities"""
+        from .services import CarrierService
+
+        origin_country = request.data.get('origin_country')
+        destination_country = request.data.get('destination_country')
+        weight_kg = request.data.get('weight_kg')
+        priority_factors = request.data.get('priority_factors', {
+            'cost': 0.4,
+            'speed': 0.3,
+            'reliability': 0.3
+        })
+
+        if not all([origin_country, destination_country, weight_kg]):
+            return Response({
+                'error': 'origin_country, destination_country, and weight_kg are required'
+            }, status=400)
+
+        try:
+            weight_kg = float(weight_kg)
+        except ValueError:
+            return Response({'error': 'Invalid weight_kg value'}, status=400)
+
+        optimized_rate = CarrierService.optimize_carrier_selection(
+            origin_country, destination_country, weight_kg, priority_factors
+        )
+
+        if not optimized_rate:
+            return Response({'error': 'No suitable carriers found'}, status=404)
+
+        return Response({
+            'optimized_selection': {
+                'carrier_name': optimized_rate['carrier_service'].carrier.display_name,
+                'service_name': optimized_rate['carrier_service'].display_name,
+                'service_type': optimized_rate['service_type'],
+                'cost_price': str(optimized_rate['cost_price']),
+                'selling_price': str(optimized_rate['selling_price']),
+                'currency': optimized_rate['currency'],
+                'estimated_days': optimized_rate['estimated_days'],
+                'composite_score': optimized_rate['composite_score'],
+                'performance': optimized_rate['performance']
+            },
+            'priority_factors': priority_factors
+        })
+
+    @action(detail=False, methods=['post'])
+    def bulk_rate_calculation(self, request):
+        """Calculate rates for multiple shipments at once"""
+        from .services import CarrierService
+
+        shipments = request.data.get('shipments', [])
+
+        if not shipments:
+            return Response({'error': 'shipments array is required'}, status=400)
+
+        results = []
+        for i, shipment in enumerate(shipments):
+            origin_country = shipment.get('origin_country')
+            destination_country = shipment.get('destination_country')
+            weight_kg = shipment.get('weight_kg')
+            dimensions = shipment.get('dimensions', {})
+            max_results = shipment.get('max_results', 3)
+
+            if not all([origin_country, destination_country, weight_kg]):
+                results.append({
+                    'shipment_index': i,
+                    'error': 'Missing required fields: origin_country, destination_country, weight_kg'
+                })
+                continue
+
+            try:
+                weight_kg = float(weight_kg)
+                rates = CarrierService.get_best_carrier_rates(
+                    origin_country, destination_country, weight_kg,
+                    dimensions, None, max_results
+                )
+
+                serialized_rates = []
+                for rate in rates:
+                    serialized_rates.append({
+                        'carrier_name': rate['carrier_service'].carrier.display_name,
+                        'service_name': rate['carrier_service'].display_name,
+                        'selling_price': str(rate['selling_price']),
+                        'currency': rate['currency'],
+                        'estimated_days': rate['estimated_days']
+                    })
+
+                results.append({
+                    'shipment_index': i,
+                    'origin_country': origin_country,
+                    'destination_country': destination_country,
+                    'weight_kg': weight_kg,
+                    'rates': serialized_rates
+                })
+
+            except Exception as e:
+                results.append({
+                    'shipment_index': i,
+                    'error': str(e)
+                })
+
+        return Response({'results': results})

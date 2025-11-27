@@ -1,0 +1,222 @@
+[
+  {
+    "model": "carriers.carrierpricing",
+    "pk": 1,
+    "fields": {
+      "carrier_service": 1,
+      "origin_country": "NL",
+      "destination_country": "DE",
+      "weight_from_kg": 0,
+      "weight_to_kg": 5,
+      "base_price": 15.50,
+      "price_per_kg": 2.50,
+      "currency": "EUR",
+      "fuel_surcharge_percent": 8.0,
+      "remote_area_surcharge": 0,
+      "oversized_surcharge": 0,
+      "effective_from": "2024-01-01T00:00:00Z",
+      "effective_to": null,
+      "is_active": true,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "carriers.carrierpricing",
+    "pk": 2,
+    "fields": {
+      "carrier_service": 1,
+      "origin_country": "NL",
+      "destination_country": "BE",
+      "weight_from_kg": 0,
+      "weight_to_kg": 5,
+      "base_price": 12.00,
+      "price_per_kg": 2.00,
+      "currency": "EUR",
+      "fuel_surcharge_percent": 8.0,
+      "remote_area_surcharge": 0,
+      "oversized_surcharge": 0,
+      "effective_from": "2024-01-01T00:00:00Z",
+      "effective_to": null,
+      "is_active": true,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "carriers.carrierpricing",
+    "pk": 3,
+    "fields": {
+      "carrier_service": 1,
+      "origin_country": "NL",
+      "destination_country": "FR",
+      "weight_from_kg": 0,
+      "weight_to_kg": 5,
+      "base_price": 18.00,
+      "price_per_kg": 3.00,
+      "currency": "EUR",
+      "fuel_surcharge_percent": 8.0,
+      "remote_area_surcharge": 0,
+      "oversized_surcharge": 0,
+      "effective_from": "2024-01-01T00:00:00Z",
+      "effective_to": null,
+      "is_active": true,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "carriers.carrierpricing",
+    "pk": 4,
+    "fields": {
+      "carrier_service": 2,
+      "origin_country": "NL",
+      "destination_country": "DE",
+      "weight_from_kg": 0,
+      "weight_to_kg": 10,
+      "base_price": 12.00,
+      "price_per_kg": 1.80,
+      "currency": "EUR",
+      "fuel_surcharge_percent": 6.0,
+      "remote_area_surcharge": 0,
+      "oversized_surcharge": 0,
+      "effective_from": "2024-01-01T00:00:00Z",
+      "effective_to": null,
+      "is_active": true,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "carriers.carrierpricing",
+    "pk": 5,
+    "fields": {
+      "carrier_service": 3,
+      "origin_country": "NL",
+      "destination_country": "DE",
+      "weight_from_kg": 0,
+      "weight_to_kg": 5,
+      "base_price": 16.00,
+      "price_per_kg": 2.80,
+      "currency": "EUR",
+      "fuel_surcharge_percent": 7.5,
+      "remote_area_surcharge": 0,
+      "oversized_surcharge": 0,
+      "effective_from": "2024-01-01T00:00:00Z",
+      "effective_to": null,
+      "is_active": true,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "carriers.carrierpricing",
+    "pk": 6,
+    "fields": {
+      "carrier_service": 5,
+      "origin_country": "NL",
+      "destination_country": "NL",
+      "weight_from_kg": 0,
+      "weight_to_kg": 2,
+      "base_price": 3.99,
+      "price_per_kg": 0,
+      "currency": "EUR",
+      "fuel_surcharge_percent": 0,
+      "remote_area_surcharge": 0,
+      "oversized_surcharge": 0,
+      "effective_from": "2024-01-01T00:00:00Z",
+      "effective_to": null,
+      "is_active": true,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "carriers.carrierpricing",
+    "pk": 7,
+    "fields": {
+      "carrier_service": 6,
+      "origin_country": "NL",
+      "destination_country": "NL",
+      "weight_from_kg": 0,
+      "weight_to_kg": 10,
+      "base_price": 6.75,
+      "price_per_kg": 0.35,
+      "currency": "EUR",
+      "fuel_surcharge_percent": 0,
+      "remote_area_surcharge": 0,
+      "oversized_surcharge": 0,
+      "effective_from": "2024-01-01T00:00:00Z",
+      "effective_to": null,
+      "is_active": true,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "carriers.carrierpricing",
+    "pk": 8,
+    "fields": {
+      "carrier_service": 6,
+      "origin_country": "NL",
+      "destination_country": "NL",
+      "weight_from_kg": 10,
+      "weight_to_kg": 23,
+      "base_price": 8.50,
+      "price_per_kg": 0.50,
+      "currency": "EUR",
+      "fuel_surcharge_percent": 0,
+      "remote_area_surcharge": 0,
+      "oversized_surcharge": 0,
+      "effective_from": "2024-01-01T00:00:00Z",
+      "effective_to": null,
+      "is_active": true,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "carriers.carrierpricing",
+    "pk": 9,
+    "fields": {
+      "carrier_service": 7,
+      "origin_country": "NL",
+      "destination_country": "BE",
+      "weight_from_kg": 0,
+      "weight_to_kg": 10,
+      "base_price": 9.50,
+      "price_per_kg": 0.80,
+      "currency": "EUR",
+      "fuel_surcharge_percent": 0,
+      "remote_area_surcharge": 0,
+      "oversized_surcharge": 0,
+      "effective_from": "2024-01-01T00:00:00Z",
+      "effective_to": null,
+      "is_active": true,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "carriers.carrierpricing",
+    "pk": 10,
+    "fields": {
+      "carrier_service": 7,
+      "origin_country": "NL",
+      "destination_country": "DE",
+      "weight_from_kg": 0,
+      "weight_to_kg": 10,
+      "base_price": 12.50,
+      "price_per_kg": 1.20,
+      "currency": "EUR",
+      "fuel_surcharge_percent": 0,
+      "remote_area_surcharge": 0,
+      "oversized_surcharge": 0,
+      "effective_from": "2024-01-01T00:00:00Z",
+      "effective_to": null,
+      "is_active": true,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z"
+    }
+  }
+]

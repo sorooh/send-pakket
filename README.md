@@ -390,3 +390,78 @@ For deployment issues or questions, check:
 - **Innovation Focus**: Continuous AI/ML enhancements
 - **Scalability First**: Designed for rapid European expansion
 - **Customer-Centric**: AI-driven personalization and support
+
+## 🚛 Expanded Carrier Network (50+ Carriers)
+
+### 🌟 Featured Carriers
+- **DHL Express**: Global express delivery with worldwide coverage
+- **UPS**: Worldwide shipping with advanced tracking
+- **FedEx**: International express services
+- **PostNL**: Netherlands postal service with European reach
+- **TNT Express**: European express network
+- **GLS Group**: Pan-European parcel delivery
+- **DPD Group**: European parcel services
+- **bpost**: Belgian postal services
+
+### 🧠 Smart Carrier Selection
+- **AI-Optimized Routing**: Machine learning selects best carrier based on:
+  - Cost efficiency
+  - Delivery speed
+  - Reliability history
+  - Service quality
+- **Dynamic Pricing**: Real-time rate optimization
+- **Performance Analytics**: Carrier performance tracking and reporting
+
+### 📊 Carrier Analytics API
+```bash
+# Get carrier performance statistics
+GET /api/carriers/analytics/{carrier_id}/performance/
+
+# Compare multiple carriers
+GET /api/carriers/analytics/compare/?carrier_ids=1,2,3
+
+# Get optimized shipping rates
+POST /api/carriers/optimization/rates/
+{
+  "origin_country": "NL",
+  "destination_country": "DE",
+  "weight_kg": 2.5,
+  "dimensions": {"length": 30, "width": 20, "height": 10}
+}
+
+# Bulk rate calculation for multiple shipments
+POST /api/carriers/optimization/bulk/
+{
+  "shipments": [
+    {
+      "origin_country": "NL",
+      "destination_country": "BE",
+      "weight_kg": 1.5
+    },
+    {
+      "origin_country": "NL",
+      "destination_country": "FR",
+      "weight_kg": 3.0
+    }
+  ]
+}
+```
+
+### 💰 Competitive Pricing
+- **Transparent Pricing**: No hidden fees or markups
+- **Bulk Discounts**: Volume-based pricing optimization
+- **Fuel Surcharge Management**: Automated surcharge calculations
+- **Currency Support**: Multi-currency pricing (EUR, USD, GBP)
+
+### 🔄 Integration Capabilities
+- **API-First Design**: RESTful APIs for all carrier operations
+- **Webhook Support**: Real-time shipment status updates
+- **Multi-Carrier Support**: Unified interface for all carriers
+- **Sandbox Environment**: Safe testing environment for integrations
+
+### 📈 Network Expansion Benefits
+- **Wider Coverage**: 50+ carriers across Europe and globally
+- **Better Rates**: Competition drives down costs
+- **Higher Reliability**: Redundant carrier options
+- **Faster Delivery**: Multiple service levels available
+- **Risk Mitigation**: Backup carriers for critical shipments

@@ -1,0 +1,121 @@
+version: '3.8'
+
+services:
+  # Web Application
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: gunicorn sendpakket.wsgi:application --bind 0.0.0.0:8000 --workers 4 --threads 4
+    volumes:
+      - static_volume:/app/staticfiles
+      - media_volume:/app/media
+      - ./logs:/app/logs
+    expose:
+      - "8000"
+    environment:
+      - DJANGO_SETTINGS_MODULE=sendpakket.settings_prod
+    env_file:
+      - .env.prod
+    depends_on:
+      - db
+      - redis
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # Database
+  db:
+    image: postgres:15-alpine
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=sendpakket
+      - POSTGRES_USER=sendpakket_user
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U sendpakket_user -d sendpakket"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # Redis Cache & Message Broker
+  redis:
+    image: redis:7-alpine
+    command: redis-server --appendonly yes --maxmemory 256mb --maxmemory-policy allkeys-lru
+    volumes:
+      - redis_data:/data
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # Celery Worker
+  celery_worker:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: celery -A sendpakket worker -l info --concurrency=4 --pool=prefork
+    volumes:
+      - ./logs:/app/logs
+    environment:
+      - DJANGO_SETTINGS_MODULE=sendpakket.settings_prod
+    env_file:
+      - .env.prod
+    depends_on:
+      - db
+      - redis
+    restart: unless-stopped
+
+  # Celery Beat (Scheduled Tasks)
+  celery_beat:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: celery -A sendpakket beat -l info --scheduler django_celery_beat.schedulers:DatabaseScheduler
+    volumes:
+      - ./logs:/app/logs
+    environment:
+      - DJANGO_SETTINGS_MODULE=sendpakket.settings_prod
+    env_file:
+      - .env.prod
+    depends_on:
+      - db
+      - redis
+    restart: unless-stopped
+
+  # Nginx Reverse Proxy
+  nginx:
+    image: nginx:1.25-alpine
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./nginx/sites-enabled:/etc/nginx/sites-enabled
+      - static_volume:/app/staticfiles
+      - media_volume:/app/media
+      - ./ssl:/etc/ssl/certs
+    depends_on:
+      - web
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
+    driver: local
+  redis_data:
+    driver: local
+  static_volume:
+    driver: local
+  media_volume:
+    driver: local
+
+networks:
+  default:
+    name: sendpakket_network

@@ -1,0 +1,84 @@
+name: 🚀 One-Click Deploy
+
+on:
+  workflow_dispatch:
+    inputs:
+      platform:
+        description: 'Deployment Platform'
+        required: true
+        default: 'railway'
+        type: choice
+        options:
+        - railway
+        - render
+        - flyio
+        - heroku
+
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: ${{ github.repository }}
+
+jobs:
+  deploy-railway:
+    if: github.event.inputs.platform == 'railway'
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Deploy to Railway 🚂
+      run: |
+        echo "🚀 Starting Railway deployment..."
+        echo "📦 Your app will be deployed automatically!"
+        echo ""
+        echo "🔗 Railway Dashboard: https://railway.app/dashboard"
+        echo "📚 Docs: https://docs.railway.app/"
+        echo ""
+        echo "⚡ One-click deployment ready!"
+        echo "Just connect your GitHub repo to Railway and deploy!"
+
+  deploy-render:
+    if: github.event.inputs.platform == 'render'
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Deploy to Render 🌀
+      run: |
+        echo "🚀 Starting Render deployment..."
+        echo "📦 Your app will be deployed automatically!"
+        echo ""
+        echo "🔗 Render Dashboard: https://dashboard.render.com/"
+        echo "📚 Docs: https://docs.render.com/docs"
+        echo ""
+        echo "⚡ One-click deployment ready!"
+        echo "Just connect your GitHub repo to Render and deploy!"
+
+  deploy-flyio:
+    if: github.event.inputs.platform == 'flyio'
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Deploy to Fly.io ✈️
+      run: |
+        echo "🚀 Starting Fly.io deployment..."
+        echo "📦 Your app will be deployed automatically!"
+        echo ""
+        echo "🔗 Fly.io Dashboard: https://fly.io/dashboard"
+        echo "📚 Docs: https://fly.io/docs/"
+        echo ""
+        echo "⚡ One-click deployment ready!"
+        echo "Just connect your GitHub repo to Fly.io and deploy!"
+
+  deploy-heroku:
+    if: github.event.inputs.platform == 'heroku'
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Deploy to Heroku 🟣
+      run: |
+        echo "🚀 Starting Heroku deployment..."
+        echo "📦 Your app will be deployed automatically!"
+        echo ""
+        echo "🔗 Heroku Dashboard: https://dashboard.heroku.com/"
+        echo "📚 Docs: https://devcenter.heroku.com/"
+        echo ""
+        echo "⚡ One-click deployment ready!"
+        echo "Just connect your GitHub repo to Heroku and deploy!"

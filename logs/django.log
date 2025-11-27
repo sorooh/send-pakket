@@ -1,0 +1,1933 @@
+INFO 2025-11-25 23:03:58,730 autoreload 46084 36828 Watching for file changes with StatReloader
+INFO 2025-11-25 23:05:06,617 autoreload 3448 15260 Watching for file changes with StatReloader
+INFO 2025-11-25 23:06:07,164 autoreload 46940 21480 Watching for file changes with StatReloader
+INFO 2025-11-25 23:07:18,253 autoreload 49388 40576 Watching for file changes with StatReloader
+WARNING 2025-11-25 23:07:21,901 log 49388 50324 Unauthorized: /api/users/register/
+WARNING 2025-11-25 23:07:21,902 basehttp 49388 50324 "POST /api/users/register/ HTTP/1.1" 401 58
+INFO 2025-11-25 23:07:27,496 autoreload 49388 40576 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\core\views.py changed, reloading.
+INFO 2025-11-25 23:07:28,870 autoreload 32288 48116 Watching for file changes with StatReloader
+ERROR 2025-11-25 23:07:36,982 log 32288 18100 Internal Server Error: /api/users/register/
+Traceback (most recent call last):
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "c:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\core\views.py", line 70, in register
+    if serializer.is_valid():
+       ~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\serializers.py", line 227, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+                           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\serializers.py", line 426, in run_validation
+    value = self.to_internal_value(data)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\serializers.py", line 479, in to_internal_value
+    for field in fields:
+                 ^^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\serializers.py", line 362, in _writable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\utils\functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+                      ~~~~~~~~~~~~~~~^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\serializers.py", line 1076, in get_fields
+    field_class, field_kwargs = self.build_field(
+                                ~~~~~~~~~~~~~~~~^
+        source, info, model, depth
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\serializers.py", line 1222, in build_field
+    return self.build_unknown_field(field_name, model_class)
+           ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\serializers.py", line 1340, in build_unknown_field
+    raise ImproperlyConfigured(
+    ...<2 lines>...
+    )
+django.core.exceptions.ImproperlyConfigured: Field name `phone` is not valid for model `User`.
+ERROR 2025-11-25 23:07:36,989 basehttp 32288 18100 "POST /api/users/register/ HTTP/1.1" 500 152952
+INFO 2025-11-25 23:07:36,990 basehttp 32288 18100 - Broken pipe from ('127.0.0.1', 50346)
+INFO 2025-11-25 23:07:41,618 autoreload 32288 48116 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\core\serializers.py changed, reloading.
+INFO 2025-11-25 23:07:42,653 autoreload 14172 10312 Watching for file changes with StatReloader
+INFO 2025-11-25 23:07:45,834 autoreload 14172 10312 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\core\serializers.py changed, reloading.
+INFO 2025-11-25 23:07:46,582 autoreload 13752 47824 Watching for file changes with StatReloader
+ERROR 2025-11-25 23:07:55,503 log 13752 21864 Internal Server Error: /api/users/register/
+Traceback (most recent call last):
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "c:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\core\views.py", line 71, in register
+    user = serializer.save()
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+                    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "c:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\core\serializers.py", line 43, in create
+    user = User.objects.create_user(**validated_data)
+TypeError: UserManager.create_user() missing 1 required positional argument: 'username'
+ERROR 2025-11-25 23:07:55,506 basehttp 13752 21864 "POST /api/users/register/ HTTP/1.1" 500 111796
+INFO 2025-11-25 23:07:59,557 autoreload 13752 47824 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\core\serializers.py changed, reloading.
+INFO 2025-11-25 23:08:00,298 autoreload 1636 15204 Watching for file changes with StatReloader
+INFO 2025-11-25 23:08:06,155 basehttp 1636 2172 "POST /api/users/register/ HTTP/1.1" 201 857
+WARNING 2025-11-25 23:08:10,039 log 1636 2172 Bad Request: /api/users/register/
+WARNING 2025-11-25 23:08:10,040 basehttp 1636 2172 "POST /api/users/register/ HTTP/1.1" 400 50
+INFO 2025-11-25 23:08:13,081 basehttp 1636 2172 "POST /api/users/login/ HTTP/1.1" 200 857
+INFO 2025-11-25 23:10:22,413 autoreload 1636 15204 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\sendpakket\urls.py changed, reloading.
+INFO 2025-11-25 23:10:23,289 autoreload 41068 35604 Watching for file changes with StatReloader
+ERROR 2025-11-25 23:16:01,778 log 47368 32872 Internal Server Error: /api/shipping/shipments/
+Traceback (most recent call last):
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.IntegrityError: NOT NULL constraint failed: shipment_items.total_price
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\mixins.py", line 19, in create
+    self.perform_create(serializer)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\shipping\views.py", line 43, in perform_create
+    serializer.save(company=user.company)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+                    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\shipping\serializers.py", line 107, in create
+    ShipmentItem.objects.create(shipment=shipment, **item_data)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\models\query.py", line 658, in create
+    obj.save(force_insert=True, using=self.db)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\models\base.py", line 814, in save
+    self.save_base(
+    ~~~~~~~~~~~~~~^
+        using=using,
+        ^^^^^^^^^^^^
+    ...<2 lines>...
+        update_fields=update_fields,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\models\base.py", line 877, in save_base
+    updated = self._save_table(
+        raw,
+    ...<4 lines>...
+        update_fields,
+    )
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\models\base.py", line 1020, in _save_table
+    results = self._do_insert(
+        cls._base_manager, using, fields, returning_fields, raw
+    )
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\models\base.py", line 1061, in _do_insert
+    return manager._insert(
+           ~~~~~~~~~~~~~~~^
+        [self],
+        ^^^^^^^
+    ...<3 lines>...
+        raw=raw,
+        ^^^^^^^^
+    )
+    ^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\models\query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\models\sql\compiler.py", line 1822, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: NOT NULL constraint failed: shipment_items.total_price
+WARNING 2025-11-25 23:16:03,205 log 47368 32872 Unauthorized: /api/shipping/shipments/
+INFO 2025-11-25 23:16:12,832 autoreload 41068 35604 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\shipping\serializers.py changed, reloading.
+INFO 2025-11-25 23:16:13,647 autoreload 34976 2072 Watching for file changes with StatReloader
+WARNING 2025-11-25 23:16:36,338 log 5512 50620 Unauthorized: /api/shipping/shipments/
+WARNING 2025-11-25 23:16:47,687 log 8768 38140 Unauthorized: /api/shipping/shipments/
+INFO 2025-11-25 23:18:00,095 autoreload 34976 2072 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\sendpakket\urls.py changed, reloading.
+INFO 2025-11-25 23:18:00,902 autoreload 45288 48104 Watching for file changes with StatReloader
+WARNING 2025-11-25 23:19:53,910 log 27784 49352 Bad Request: /api/carriers/carriers/by_country/
+ERROR 2025-11-25 23:19:54,189 log 27784 49352 Internal Server Error: /api/carriers/carriers/ae4c47b3-2e9b-44f3-8ab0-a6c0d5443fa7/
+Traceback (most recent call last):
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\mixins.py", line 54, in retrieve
+    instance = self.get_object()
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\generics.py", line 83, in get_object
+    queryset = self.filter_queryset(self.get_queryset())
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\generics.py", line 150, in filter_queryset
+    queryset = backend().filter_queryset(self.request, queryset, self)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django_filters\rest_framework\backends.py", line 68, in filter_queryset
+    filterset = self.get_filterset(request, queryset, view)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django_filters\rest_framework\backends.py", line 20, in get_filterset
+    filterset_class = self.get_filterset_class(view, queryset)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django_filters\rest_framework\backends.py", line 51, in get_filterset_class
+    class AutoFilterSet(self.filterset_base):
+    ...<2 lines>...
+            fields = filterset_fields
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django_filters\filterset.py", line 62, in __new__
+    new_class.base_filters = new_class.get_filters()
+                             ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django_filters\filterset.py", line 340, in get_filters
+    filters[filter_name] = cls.filter_for_field(
+                           ~~~~~~~~~~~~~~~~~~~~^
+        field, field_name, lookup_expr
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django_filters\filterset.py", line 373, in filter_for_field
+    assert filter_class is not None, (
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: AutoFilterSet resolved field 'countries_served' with 'exact' lookup to an unrecognized field type JSONField. Try adding an override to 'Meta.filter_overrides'. See: https://django-filter.readthedocs.io/en/main/ref/filterset.html#customise-filter-generation-with-filter-overrides
+ERROR 2025-11-25 23:19:54,757 log 27784 49352 Internal Server Error: /api/carriers/carriers/
+Traceback (most recent call last):
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\mixins.py", line 38, in list
+    queryset = self.filter_queryset(self.get_queryset())
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\generics.py", line 150, in filter_queryset
+    queryset = backend().filter_queryset(self.request, queryset, self)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django_filters\rest_framework\backends.py", line 68, in filter_queryset
+    filterset = self.get_filterset(request, queryset, view)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django_filters\rest_framework\backends.py", line 20, in get_filterset
+    filterset_class = self.get_filterset_class(view, queryset)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django_filters\rest_framework\backends.py", line 51, in get_filterset_class
+    class AutoFilterSet(self.filterset_base):
+    ...<2 lines>...
+            fields = filterset_fields
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django_filters\filterset.py", line 62, in __new__
+    new_class.base_filters = new_class.get_filters()
+                             ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django_filters\filterset.py", line 340, in get_filters
+    filters[filter_name] = cls.filter_for_field(
+                           ~~~~~~~~~~~~~~~~~~~~^
+        field, field_name, lookup_expr
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django_filters\filterset.py", line 373, in filter_for_field
+    assert filter_class is not None, (
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: AutoFilterSet resolved field 'countries_served' with 'exact' lookup to an unrecognized field type JSONField. Try adding an override to 'Meta.filter_overrides'. See: https://django-filter.readthedocs.io/en/main/ref/filterset.html#customise-filter-generation-with-filter-overrides
+ERROR 2025-11-25 23:19:55,036 log 27784 49352 Internal Server Error: /api/carriers/carriers/e4f7b3ac-b927-4643-84f8-cd2560752036/services/
+Traceback (most recent call last):
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\carriers\views.py", line 39, in services
+    carrier = self.get_object()
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\generics.py", line 83, in get_object
+    queryset = self.filter_queryset(self.get_queryset())
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\generics.py", line 150, in filter_queryset
+    queryset = backend().filter_queryset(self.request, queryset, self)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django_filters\rest_framework\backends.py", line 68, in filter_queryset
+    filterset = self.get_filterset(request, queryset, view)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django_filters\rest_framework\backends.py", line 20, in get_filterset
+    filterset_class = self.get_filterset_class(view, queryset)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django_filters\rest_framework\backends.py", line 51, in get_filterset_class
+    class AutoFilterSet(self.filterset_base):
+    ...<2 lines>...
+            fields = filterset_fields
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django_filters\filterset.py", line 62, in __new__
+    new_class.base_filters = new_class.get_filters()
+                             ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django_filters\filterset.py", line 340, in get_filters
+    filters[filter_name] = cls.filter_for_field(
+                           ~~~~~~~~~~~~~~~~~~~~^
+        field, field_name, lookup_expr
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django_filters\filterset.py", line 373, in filter_for_field
+    assert filter_class is not None, (
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: AutoFilterSet resolved field 'countries_served' with 'exact' lookup to an unrecognized field type JSONField. Try adding an override to 'Meta.filter_overrides'. See: https://django-filter.readthedocs.io/en/main/ref/filterset.html#customise-filter-generation-with-filter-overrides
+WARNING 2025-11-25 23:19:55,316 log 27784 49352 Bad Request: /api/carriers/credentials/
+ERROR 2025-11-25 23:19:56,138 log 27784 49352 Internal Server Error: /api/carriers/credentials/fa00e218-7614-465f-85a6-5f7c59eb3c97/verify/
+Traceback (most recent call last):
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\carriers\views.py", line 159, in verify
+    credentials.last_verified_at = timezone.now()
+                                   ^^^^^^^^
+NameError: name 'timezone' is not defined
+ERROR 2025-11-25 23:19:57,733 log 27784 49352 Internal Server Error: /api/carriers/pricing/calculate_rate/
+Traceback (most recent call last):
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\carriers\views.py", line 219, in calculate_rate
+    Q(effective_to__isnull=True) | Q(effective_to__gte=timezone.now())
+                                                       ^^^^^^^^
+NameError: name 'timezone' is not defined
+WARNING 2025-11-25 23:19:58,016 log 27784 49352 Bad Request: /api/carriers/pricing/calculate_rate/
+WARNING 2025-11-25 23:19:58,857 log 27784 49352 Bad Request: /api/carriers/services/by_carrier/
+INFO 2025-11-25 23:20:11,553 autoreload 45288 48104 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\carriers\views.py changed, reloading.
+INFO 2025-11-25 23:20:12,373 autoreload 4400 48948 Watching for file changes with StatReloader
+INFO 2025-11-25 23:20:18,927 autoreload 4400 48948 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\carriers\views.py changed, reloading.
+INFO 2025-11-25 23:20:19,705 autoreload 8312 6428 Watching for file changes with StatReloader
+INFO 2025-11-25 23:20:22,813 autoreload 8312 6428 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\carriers\views.py changed, reloading.
+INFO 2025-11-25 23:20:23,629 autoreload 39168 49396 Watching for file changes with StatReloader
+INFO 2025-11-25 23:20:35,215 autoreload 39168 49396 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\carriers\views.py changed, reloading.
+INFO 2025-11-25 23:20:36,163 autoreload 34144 30180 Watching for file changes with StatReloader
+INFO 2025-11-25 23:20:39,455 autoreload 34144 30180 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\carriers\views.py changed, reloading.
+INFO 2025-11-25 23:20:40,479 autoreload 17904 33860 Watching for file changes with StatReloader
+WARNING 2025-11-25 23:20:45,730 log 37600 15560 Bad Request: /api/carriers/carriers/by_country/
+WARNING 2025-11-25 23:20:47,128 log 37600 15560 Bad Request: /api/carriers/credentials/
+ERROR 2025-11-25 23:20:49,682 log 37600 15560 Internal Server Error: /api/carriers/pricing/calculate_rate/
+Traceback (most recent call last):
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\carriers\views.py", line 229, in calculate_rate
+    weight_price = (weight_kg - pricing_rule.weight_from_kg) * pricing_rule.price_per_kg
+                    ~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for -: 'float' and 'decimal.Decimal'
+WARNING 2025-11-25 23:20:49,965 log 37600 15560 Bad Request: /api/carriers/pricing/calculate_rate/
+WARNING 2025-11-25 23:20:50,776 log 37600 15560 Bad Request: /api/carriers/services/by_carrier/
+INFO 2025-11-25 23:20:56,775 autoreload 17904 33860 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\carriers\views.py changed, reloading.
+INFO 2025-11-25 23:20:57,593 autoreload 13752 50372 Watching for file changes with StatReloader
+WARNING 2025-11-25 23:23:14,459 log 35476 36400 Bad Request: /api/carriers/carriers/by_country/
+WARNING 2025-11-25 23:23:15,913 log 35476 36400 Bad Request: /api/carriers/credentials/
+ERROR 2025-11-25 23:23:18,291 log 35476 36400 Internal Server Error: /api/carriers/pricing/calculate_rate/
+Traceback (most recent call last):
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\carriers\views.py", line 229, in calculate_rate
+    weight_from_kg = Decimal(str(pricing_rule.weight_from_kg))
+                     ^^^^^^^
+NameError: name 'Decimal' is not defined
+WARNING 2025-11-25 23:23:18,567 log 35476 36400 Bad Request: /api/carriers/pricing/calculate_rate/
+WARNING 2025-11-25 23:23:19,538 log 35476 36400 Bad Request: /api/carriers/services/by_carrier/
+INFO 2025-11-25 23:23:23,327 autoreload 13752 50372 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\carriers\views.py changed, reloading.
+INFO 2025-11-25 23:23:24,310 autoreload 448 48168 Watching for file changes with StatReloader
+WARNING 2025-11-25 23:24:35,121 log 39880 50396 Bad Request: /api/carriers/credentials/
+INFO 2025-11-25 23:24:41,093 autoreload 448 48168 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\carriers\serializers.py changed, reloading.
+INFO 2025-11-25 23:24:42,127 autoreload 19076 47980 Watching for file changes with StatReloader
+WARNING 2025-11-25 23:25:00,451 log 46608 35764 Bad Request: /api/carriers/carriers/by_country/
+ERROR 2025-11-25 23:25:01,917 log 46608 35764 Internal Server Error: /api/carriers/credentials/
+Traceback (most recent call last):
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.IntegrityError: UNIQUE constraint failed: carrier_credentials.company_id, carrier_credentials.carrier_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\mixins.py", line 19, in create
+    self.perform_create(serializer)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\carriers\views.py", line 152, in perform_create
+    serializer.save(company=self.request.user.company)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+                    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\serializers.py", line 962, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\models\query.py", line 658, in create
+    obj.save(force_insert=True, using=self.db)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\models\base.py", line 814, in save
+    self.save_base(
+    ~~~~~~~~~~~~~~^
+        using=using,
+        ^^^^^^^^^^^^
+    ...<2 lines>...
+        update_fields=update_fields,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\models\base.py", line 877, in save_base
+    updated = self._save_table(
+        raw,
+    ...<4 lines>...
+        update_fields,
+    )
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\models\base.py", line 1020, in _save_table
+    results = self._do_insert(
+        cls._base_manager, using, fields, returning_fields, raw
+    )
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\models\base.py", line 1061, in _do_insert
+    return manager._insert(
+           ~~~~~~~~~~~~~~~^
+        [self],
+        ^^^^^^^
+    ...<3 lines>...
+        raw=raw,
+        ^^^^^^^^
+    )
+    ^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\models\query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\models\sql\compiler.py", line 1822, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: UNIQUE constraint failed: carrier_credentials.company_id, carrier_credentials.carrier_id
+WARNING 2025-11-25 23:25:04,634 log 46608 35764 Bad Request: /api/carriers/pricing/calculate_rate/
+WARNING 2025-11-25 23:25:05,450 log 46608 35764 Bad Request: /api/carriers/services/by_carrier/
+WARNING 2025-11-25 23:25:30,810 log 26912 17100 Bad Request: /api/carriers/carriers/by_country/
+WARNING 2025-11-25 23:25:35,451 log 26912 17100 Bad Request: /api/carriers/pricing/calculate_rate/
+WARNING 2025-11-25 23:25:36,307 log 26912 17100 Bad Request: /api/carriers/services/by_carrier/
+INFO 2025-11-25 23:28:34,530 autoreload 19076 47980 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\sendpakket\urls.py changed, reloading.
+INFO 2025-11-25 23:28:35,576 autoreload 41432 48656 Watching for file changes with StatReloader
+ERROR 2025-11-25 23:32:34,738 log 47560 24172 Internal Server Error: /api/payments/invoices/
+Traceback (most recent call last):
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.IntegrityError: NOT NULL constraint failed: invoices.company_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\mixins.py", line 19, in create
+    self.perform_create(serializer)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\mixins.py", line 24, in perform_create
+    serializer.save()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+                    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\serializers.py", line 262, in create
+    invoice = super().create(validated_data)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\serializers.py", line 962, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\models\query.py", line 658, in create
+    obj.save(force_insert=True, using=self.db)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\models.py", line 145, in save
+    super().save(*args, **kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\models\base.py", line 814, in save
+    self.save_base(
+    ~~~~~~~~~~~~~~^
+        using=using,
+        ^^^^^^^^^^^^
+    ...<2 lines>...
+        update_fields=update_fields,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\models\base.py", line 877, in save_base
+    updated = self._save_table(
+        raw,
+    ...<4 lines>...
+        update_fields,
+    )
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\models\base.py", line 1020, in _save_table
+    results = self._do_insert(
+        cls._base_manager, using, fields, returning_fields, raw
+    )
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\models\base.py", line 1061, in _do_insert
+    return manager._insert(
+           ~~~~~~~~~~~~~~~^
+        [self],
+        ^^^^^^^
+    ...<3 lines>...
+        raw=raw,
+        ^^^^^^^^
+    )
+    ^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\models\query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\models\sql\compiler.py", line 1822, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: NOT NULL constraint failed: invoices.company_id
+ERROR 2025-11-25 23:32:35,313 log 47560 24172 Internal Server Error: /api/payments/invoices/summary/
+Traceback (most recent call last):
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\views.py", line 179, in summary
+    count=models.Count('id')
+          ^^^^^^
+NameError: name 'models' is not defined
+ERROR 2025-11-25 23:32:38,217 log 47560 24172 Internal Server Error: /api/payments/payments/8afbf1ae-9abd-4976-a675-ff6628c2be46/refund/
+Traceback (most recent call last):
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\views.py", line 269, in refund
+    if refund_amount > payment.amount:
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: '>' not supported between instances of 'str' and 'decimal.Decimal'
+ERROR 2025-11-25 23:32:44,874 log 47560 24172 Internal Server Error: /api/payments/subscriptions/
+Traceback (most recent call last):
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.IntegrityError: UNIQUE constraint failed: subscriptions.company_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\mixins.py", line 19, in create
+    self.perform_create(serializer)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\mixins.py", line 24, in perform_create
+    serializer.save()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+                    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\serializers.py", line 244, in create
+    return super().create(validated_data)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\serializers.py", line 962, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\models\query.py", line 658, in create
+    obj.save(force_insert=True, using=self.db)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\models\base.py", line 814, in save
+    self.save_base(
+    ~~~~~~~~~~~~~~^
+        using=using,
+        ^^^^^^^^^^^^
+    ...<2 lines>...
+        update_fields=update_fields,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\models\base.py", line 877, in save_base
+    updated = self._save_table(
+        raw,
+    ...<4 lines>...
+        update_fields,
+    )
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\models\base.py", line 1020, in _save_table
+    results = self._do_insert(
+        cls._base_manager, using, fields, returning_fields, raw
+    )
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\models\base.py", line 1061, in _do_insert
+    return manager._insert(
+           ~~~~~~~~~~~~~~~^
+        [self],
+        ^^^^^^^
+    ...<3 lines>...
+        raw=raw,
+        ^^^^^^^^
+    )
+    ^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\models\query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\models\sql\compiler.py", line 1822, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: UNIQUE constraint failed: subscriptions.company_id
+WARNING 2025-11-25 23:32:47,698 log 47560 24172 Bad Request: /api/payments/usage-records/
+ERROR 2025-11-25 23:32:49,297 log 47560 24172 Internal Server Error: /api/payments/payments/6224ae23-caf5-4f89-a915-a4b5c2784f2e/refund/
+Traceback (most recent call last):
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\views.py", line 269, in refund
+    if refund_amount > payment.amount:
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: '>' not supported between instances of 'str' and 'decimal.Decimal'
+ERROR 2025-11-25 23:32:50,334 log 47560 24172 Internal Server Error: /api/payments/usage-records/summary/
+Traceback (most recent call last):
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\views.py", line 327, in summary
+    count=models.Count('id')
+          ^^^^^^
+NameError: name 'models' is not defined
+INFO 2025-11-25 23:33:40,857 autoreload 41432 48656 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\views.py changed, reloading.
+INFO 2025-11-25 23:33:41,991 autoreload 39948 5536 Watching for file changes with StatReloader
+INFO 2025-11-25 23:33:53,024 autoreload 39948 5536 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\serializers.py changed, reloading.
+INFO 2025-11-25 23:33:54,090 autoreload 37848 39052 Watching for file changes with StatReloader
+INFO 2025-11-25 23:33:56,395 autoreload 37848 39052 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\views.py changed, reloading.
+INFO 2025-11-25 23:33:57,509 autoreload 20948 44840 Watching for file changes with StatReloader
+INFO 2025-11-25 23:34:29,964 autoreload 20948 44840 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\models.py changed, reloading.
+INFO 2025-11-25 23:34:30,772 autoreload 6468 46600 Watching for file changes with StatReloader
+INFO 2025-11-25 23:35:33,213 autoreload 6468 46600 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\serializers.py changed, reloading.
+INFO 2025-11-25 23:35:34,333 autoreload 14016 48216 Watching for file changes with StatReloader
+INFO 2025-11-25 23:35:38,228 autoreload 14016 48216 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\serializers.py changed, reloading.
+INFO 2025-11-25 23:35:39,433 autoreload 35228 19824 Watching for file changes with StatReloader
+INFO 2025-11-25 23:35:48,328 autoreload 35228 19824 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\serializers.py changed, reloading.
+INFO 2025-11-25 23:35:49,234 autoreload 42904 49888 Watching for file changes with StatReloader
+WARNING 2025-11-25 23:36:08,910 log 6956 14880 Bad Request: /api/payments/usage-records/
+WARNING 2025-11-25 23:36:44,027 log 6004 26144 Bad Request: /api/payments/shipment-transactions/
+INFO 2025-11-25 23:36:53,207 autoreload 42904 49888 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\serializers.py changed, reloading.
+INFO 2025-11-25 23:36:54,065 autoreload 32020 48172 Watching for file changes with StatReloader
+INFO 2025-11-25 23:36:57,445 autoreload 32020 48172 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\views.py changed, reloading.
+INFO 2025-11-25 23:36:58,380 autoreload 45980 45152 Watching for file changes with StatReloader
+INFO 2025-11-25 23:37:31,812 autoreload 45980 45152 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\serializers.py changed, reloading.
+INFO 2025-11-25 23:37:32,574 autoreload 24760 6220 Watching for file changes with StatReloader
+INFO 2025-11-25 23:37:37,953 autoreload 24760 6220 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\serializers.py changed, reloading.
+INFO 2025-11-25 23:37:38,858 autoreload 9772 9740 Watching for file changes with StatReloader
+WARNING 2025-11-25 23:38:49,418 log 36452 43796 Bad Request: /api/payments/usage-records/
+INFO 2025-11-25 23:39:10,073 autoreload 9772 9740 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\views.py changed, reloading.
+INFO 2025-11-25 23:39:11,077 autoreload 48204 40572 Watching for file changes with StatReloader
+WARNING 2025-11-25 23:40:10,565 log 37836 50360 Bad Request: /api/payments/usage-records/
+INFO 2025-11-25 23:40:21,948 autoreload 48204 40572 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\views.py changed, reloading.
+INFO 2025-11-25 23:40:22,759 autoreload 12216 34820 Watching for file changes with StatReloader
+INFO 2025-11-25 23:40:26,093 autoreload 12216 34820 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\views.py changed, reloading.
+INFO 2025-11-25 23:40:26,845 autoreload 32652 15116 Watching for file changes with StatReloader
+INFO 2025-11-25 23:40:29,067 autoreload 32652 15116 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\views.py changed, reloading.
+INFO 2025-11-25 23:40:29,802 autoreload 15124 17260 Watching for file changes with StatReloader
+INFO 2025-11-25 23:40:33,090 autoreload 15124 17260 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\views.py changed, reloading.
+INFO 2025-11-25 23:40:33,906 autoreload 49572 8628 Watching for file changes with StatReloader
+INFO 2025-11-25 23:40:36,069 autoreload 49572 8628 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\views.py changed, reloading.
+INFO 2025-11-25 23:40:36,826 autoreload 50880 49396 Watching for file changes with StatReloader
+INFO 2025-11-25 23:40:51,816 autoreload 50880 49396 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\serializers.py changed, reloading.
+INFO 2025-11-25 23:40:52,569 autoreload 7564 41152 Watching for file changes with StatReloader
+ERROR 2025-11-25 23:41:05,943 log 39672 37848 Internal Server Error: /api/payments/invoices/summary/
+Traceback (most recent call last):
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\views.py", line 168, in summary
+    queryset = self.get_queryset()
+  File "C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\views.py", line 130, in get_queryset
+    queryset = super().get_queryset()
+  File "C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\views.py", line 31, in get_queryset
+    queryset = super().get_queryset()
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\generics.py", line 63, in get_queryset
+    assert self.queryset is not None, (
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'InvoiceViewSet' should either include a `queryset` attribute, or override the `get_queryset()` method.
+ERROR 2025-11-25 23:41:06,219 log 39672 37848 Internal Server Error: /api/payments/invoices/
+Traceback (most recent call last):
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\mixins.py", line 38, in list
+    queryset = self.filter_queryset(self.get_queryset())
+                                    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\views.py", line 130, in get_queryset
+    queryset = super().get_queryset()
+  File "C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\views.py", line 31, in get_queryset
+    queryset = super().get_queryset()
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\generics.py", line 63, in get_queryset
+    assert self.queryset is not None, (
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'InvoiceViewSet' should either include a `queryset` attribute, or override the `get_queryset()` method.
+ERROR 2025-11-25 23:41:06,499 log 39672 37848 Internal Server Error: /api/payments/invoices/fe6a757e-38e9-47d0-8130-1cc69af48ac3/mark_paid/
+Traceback (most recent call last):
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\views.py", line 138, in mark_paid
+    invoice = self.get_object()
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\generics.py", line 83, in get_object
+    queryset = self.filter_queryset(self.get_queryset())
+                                    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\views.py", line 130, in get_queryset
+    queryset = super().get_queryset()
+  File "C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\views.py", line 31, in get_queryset
+    queryset = super().get_queryset()
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\generics.py", line 63, in get_queryset
+    assert self.queryset is not None, (
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'InvoiceViewSet' should either include a `queryset` attribute, or override the `get_queryset()` method.
+ERROR 2025-11-25 23:41:07,845 log 39672 37848 Internal Server Error: /api/payments/payments/
+Traceback (most recent call last):
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\mixins.py", line 38, in list
+    queryset = self.filter_queryset(self.get_queryset())
+                                    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\views.py", line 216, in get_queryset
+    queryset = super().get_queryset()
+  File "C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\views.py", line 31, in get_queryset
+    queryset = super().get_queryset()
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\generics.py", line 63, in get_queryset
+    assert self.queryset is not None, (
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'PaymentViewSet' should either include a `queryset` attribute, or override the `get_queryset()` method.
+ERROR 2025-11-25 23:41:08,118 log 39672 37848 Internal Server Error: /api/payments/payments/2e5d7d74-c0ab-4c52-a146-667643956397/refund/
+Traceback (most recent call last):
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\views.py", line 263, in refund
+    payment = self.get_object()
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\generics.py", line 83, in get_object
+    queryset = self.filter_queryset(self.get_queryset())
+                                    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\views.py", line 216, in get_queryset
+    queryset = super().get_queryset()
+  File "C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\views.py", line 31, in get_queryset
+    queryset = super().get_queryset()
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\generics.py", line 63, in get_queryset
+    assert self.queryset is not None, (
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'PaymentViewSet' should either include a `queryset` attribute, or override the `get_queryset()` method.
+ERROR 2025-11-25 23:41:08,382 log 39672 37848 Internal Server Error: /api/payments/payments/b504d170-2c8b-4299-8683-19a6960b1b3d/process/
+Traceback (most recent call last):
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\views.py", line 224, in process
+    payment = self.get_object()
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\generics.py", line 83, in get_object
+    queryset = self.filter_queryset(self.get_queryset())
+                                    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\views.py", line 216, in get_queryset
+    queryset = super().get_queryset()
+  File "C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\views.py", line 31, in get_queryset
+    queryset = super().get_queryset()
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\generics.py", line 63, in get_queryset
+    assert self.queryset is not None, (
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'PaymentViewSet' should either include a `queryset` attribute, or override the `get_queryset()` method.
+ERROR 2025-11-25 23:41:08,917 log 39672 37848 Internal Server Error: /api/payments/shipment-transactions/
+Traceback (most recent call last):
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\mixins.py", line 38, in list
+    queryset = self.filter_queryset(self.get_queryset())
+                                    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\views.py", line 357, in get_queryset
+    queryset = super().get_queryset()
+  File "C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\views.py", line 31, in get_queryset
+    queryset = super().get_queryset()
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\generics.py", line 63, in get_queryset
+    assert self.queryset is not None, (
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'ShipmentTransactionViewSet' should either include a `queryset` attribute, or override the `get_queryset()` method.
+ERROR 2025-11-25 23:41:09,210 log 39672 37848 Internal Server Error: /api/payments/shipment-transactions/84316377-7f06-4002-8443-c48e16911bec/mark_billed/
+Traceback (most recent call last):
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\views.py", line 406, in mark_billed
+    transaction = self.get_object()
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\generics.py", line 83, in get_object
+    queryset = self.filter_queryset(self.get_queryset())
+                                    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\views.py", line 357, in get_queryset
+    queryset = super().get_queryset()
+  File "C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\views.py", line 31, in get_queryset
+    queryset = super().get_queryset()
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\generics.py", line 63, in get_queryset
+    assert self.queryset is not None, (
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'ShipmentTransactionViewSet' should either include a `queryset` attribute, or override the `get_queryset()` method.
+ERROR 2025-11-25 23:41:09,485 log 39672 37848 Internal Server Error: /api/payments/shipment-transactions/profit_summary/
+Traceback (most recent call last):
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\views.py", line 369, in profit_summary
+    queryset = self.get_queryset()
+  File "C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\views.py", line 357, in get_queryset
+    queryset = super().get_queryset()
+  File "C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\views.py", line 31, in get_queryset
+    queryset = super().get_queryset()
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\generics.py", line 63, in get_queryset
+    assert self.queryset is not None, (
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'ShipmentTransactionViewSet' should either include a `queryset` attribute, or override the `get_queryset()` method.
+ERROR 2025-11-25 23:41:09,761 log 39672 37848 Internal Server Error: /api/payments/subscriptions/221992c8-327b-4596-a097-3d11a7d366fb/cancel/
+Traceback (most recent call last):
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\views.py", line 56, in cancel
+    subscription = self.get_object()
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\generics.py", line 83, in get_object
+    queryset = self.filter_queryset(self.get_queryset())
+                                    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\views.py", line 50, in get_queryset
+    queryset = super().get_queryset()
+  File "C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\views.py", line 31, in get_queryset
+    queryset = super().get_queryset()
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\generics.py", line 63, in get_queryset
+    assert self.queryset is not None, (
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'SubscriptionViewSet' should either include a `queryset` attribute, or override the `get_queryset()` method.
+ERROR 2025-11-25 23:41:10,303 log 39672 37848 Internal Server Error: /api/payments/subscriptions/
+Traceback (most recent call last):
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\mixins.py", line 38, in list
+    queryset = self.filter_queryset(self.get_queryset())
+                                    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\views.py", line 50, in get_queryset
+    queryset = super().get_queryset()
+  File "C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\views.py", line 31, in get_queryset
+    queryset = super().get_queryset()
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\generics.py", line 63, in get_queryset
+    assert self.queryset is not None, (
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'SubscriptionViewSet' should either include a `queryset` attribute, or override the `get_queryset()` method.
+ERROR 2025-11-25 23:41:10,823 log 39672 37848 Internal Server Error: /api/payments/subscriptions/
+Traceback (most recent call last):
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\mixins.py", line 38, in list
+    queryset = self.filter_queryset(self.get_queryset())
+                                    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\views.py", line 50, in get_queryset
+    queryset = super().get_queryset()
+  File "C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\views.py", line 31, in get_queryset
+    queryset = super().get_queryset()
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\generics.py", line 63, in get_queryset
+    assert self.queryset is not None, (
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'SubscriptionViewSet' should either include a `queryset` attribute, or override the `get_queryset()` method.
+ERROR 2025-11-25 23:41:11,096 log 39672 37848 Internal Server Error: /api/payments/subscriptions/de2277b4-099a-4c55-b5af-b25fd5e15b02/usage/
+Traceback (most recent call last):
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\views.py", line 92, in usage
+    subscription = self.get_object()
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\generics.py", line 83, in get_object
+    queryset = self.filter_queryset(self.get_queryset())
+                                    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\views.py", line 50, in get_queryset
+    queryset = super().get_queryset()
+  File "C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\views.py", line 31, in get_queryset
+    queryset = super().get_queryset()
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\generics.py", line 63, in get_queryset
+    assert self.queryset is not None, (
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'SubscriptionViewSet' should either include a `queryset` attribute, or override the `get_queryset()` method.
+ERROR 2025-11-25 23:41:11,636 log 39672 37848 Internal Server Error: /api/payments/usage-records/
+Traceback (most recent call last):
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\mixins.py", line 38, in list
+    queryset = self.filter_queryset(self.get_queryset())
+                                    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\views.py", line 311, in get_queryset
+    queryset = super().get_queryset()
+  File "C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\views.py", line 31, in get_queryset
+    queryset = super().get_queryset()
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\generics.py", line 63, in get_queryset
+    assert self.queryset is not None, (
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'UsageRecordViewSet' should either include a `queryset` attribute, or override the `get_queryset()` method.
+ERROR 2025-11-25 23:41:11,906 log 39672 37848 Internal Server Error: /api/payments/usage-records/summary/
+Traceback (most recent call last):
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\views.py", line 330, in summary
+    usage_summary = self.get_queryset().filter(
+                    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\views.py", line 311, in get_queryset
+    queryset = super().get_queryset()
+  File "C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\views.py", line 31, in get_queryset
+    queryset = super().get_queryset()
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\generics.py", line 63, in get_queryset
+    assert self.queryset is not None, (
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'UsageRecordViewSet' should either include a `queryset` attribute, or override the `get_queryset()` method.
+INFO 2025-11-25 23:41:41,523 autoreload 7564 41152 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\views.py changed, reloading.
+INFO 2025-11-25 23:41:42,274 autoreload 23652 21116 Watching for file changes with StatReloader
+INFO 2025-11-25 23:41:44,518 autoreload 23652 21116 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\views.py changed, reloading.
+INFO 2025-11-25 23:41:45,288 autoreload 18912 47268 Watching for file changes with StatReloader
+INFO 2025-11-25 23:41:48,501 autoreload 18912 47268 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\views.py changed, reloading.
+INFO 2025-11-25 23:41:49,357 autoreload 16612 15984 Watching for file changes with StatReloader
+INFO 2025-11-25 23:41:51,965 autoreload 16612 15984 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\views.py changed, reloading.
+INFO 2025-11-25 23:41:52,778 autoreload 28588 41012 Watching for file changes with StatReloader
+INFO 2025-11-25 23:41:55,014 autoreload 28588 41012 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\views.py changed, reloading.
+INFO 2025-11-25 23:41:55,832 autoreload 40340 12548 Watching for file changes with StatReloader
+INFO 2025-11-25 23:41:59,119 autoreload 40340 12548 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\views.py changed, reloading.
+INFO 2025-11-25 23:41:59,871 autoreload 34148 37784 Watching for file changes with StatReloader
+INFO 2025-11-25 23:44:13,486 autoreload 34148 37784 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\views.py changed, reloading.
+INFO 2025-11-25 23:44:14,476 autoreload 46660 40632 Watching for file changes with StatReloader
+INFO 2025-11-25 23:44:16,956 autoreload 46660 40632 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\views.py changed, reloading.
+INFO 2025-11-25 23:44:17,988 autoreload 37560 5268 Watching for file changes with StatReloader
+INFO 2025-11-25 23:44:20,410 autoreload 37560 5268 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\views.py changed, reloading.
+INFO 2025-11-25 23:44:21,350 autoreload 6220 9728 Watching for file changes with StatReloader
+INFO 2025-11-25 23:44:24,971 autoreload 6220 9728 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\views.py changed, reloading.
+INFO 2025-11-25 23:44:26,018 autoreload 6064 49332 Watching for file changes with StatReloader
+INFO 2025-11-25 23:44:28,718 autoreload 6064 49332 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\views.py changed, reloading.
+INFO 2025-11-25 23:44:29,628 autoreload 18248 38528 Watching for file changes with StatReloader
+INFO 2025-11-25 23:44:59,987 autoreload 18248 38528 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\views.py changed, reloading.
+INFO 2025-11-25 23:45:00,921 autoreload 14312 13216 Watching for file changes with StatReloader
+INFO 2025-11-25 23:45:46,390 autoreload 14312 13216 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\views.py changed, reloading.
+INFO 2025-11-25 23:45:47,478 autoreload 31584 49788 Watching for file changes with StatReloader
+INFO 2025-11-25 23:45:49,869 autoreload 31584 49788 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\views.py changed, reloading.
+INFO 2025-11-25 23:45:51,108 autoreload 25964 36896 Watching for file changes with StatReloader
+INFO 2025-11-25 23:45:54,561 autoreload 25964 36896 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\views.py changed, reloading.
+INFO 2025-11-25 23:45:55,615 autoreload 33048 48372 Watching for file changes with StatReloader
+INFO 2025-11-25 23:45:59,161 autoreload 33048 48372 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\views.py changed, reloading.
+INFO 2025-11-25 23:46:00,113 autoreload 46876 23248 Watching for file changes with StatReloader
+INFO 2025-11-25 23:46:02,670 autoreload 46876 23248 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\views.py changed, reloading.
+INFO 2025-11-25 23:46:03,741 autoreload 28292 27200 Watching for file changes with StatReloader
+INFO 2025-11-25 23:46:34,327 autoreload 28292 27200 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\views.py changed, reloading.
+INFO 2025-11-25 23:46:35,237 autoreload 2296 35296 Watching for file changes with StatReloader
+INFO 2025-11-25 23:46:37,912 autoreload 2296 35296 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\views.py changed, reloading.
+INFO 2025-11-25 23:46:39,027 autoreload 48168 23192 Watching for file changes with StatReloader
+INFO 2025-11-25 23:46:41,732 autoreload 48168 23192 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\views.py changed, reloading.
+INFO 2025-11-25 23:46:42,818 autoreload 41136 33580 Watching for file changes with StatReloader
+INFO 2025-11-25 23:46:45,440 autoreload 41136 33580 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\views.py changed, reloading.
+INFO 2025-11-25 23:46:46,539 autoreload 1420 36680 Watching for file changes with StatReloader
+INFO 2025-11-25 23:46:52,499 autoreload 1420 36680 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\views.py changed, reloading.
+INFO 2025-11-25 23:46:53,735 autoreload 4896 28848 Watching for file changes with StatReloader
+INFO 2025-11-25 23:47:00,450 autoreload 4896 28848 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\views.py changed, reloading.
+INFO 2025-11-25 23:47:01,330 autoreload 44996 49792 Watching for file changes with StatReloader
+INFO 2025-11-25 23:47:04,890 autoreload 44996 49792 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\views.py changed, reloading.
+INFO 2025-11-25 23:47:05,848 autoreload 5140 38652 Watching for file changes with StatReloader
+INFO 2025-11-25 23:47:09,281 autoreload 5140 38652 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\views.py changed, reloading.
+INFO 2025-11-25 23:47:10,161 autoreload 26936 26816 Watching for file changes with StatReloader
+INFO 2025-11-25 23:47:13,480 autoreload 26936 26816 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\views.py changed, reloading.
+INFO 2025-11-25 23:47:14,372 autoreload 13004 38196 Watching for file changes with StatReloader
+INFO 2025-11-25 23:47:17,735 autoreload 13004 38196 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\views.py changed, reloading.
+INFO 2025-11-25 23:47:18,759 autoreload 25956 50192 Watching for file changes with StatReloader
+INFO 2025-11-25 23:47:46,996 autoreload 25956 50192 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\views.py changed, reloading.
+INFO 2025-11-25 23:47:48,063 autoreload 48404 27172 Watching for file changes with StatReloader
+INFO 2025-11-25 23:47:53,535 autoreload 48404 27172 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\views.py changed, reloading.
+INFO 2025-11-25 23:47:54,340 autoreload 50052 16872 Watching for file changes with StatReloader
+INFO 2025-11-25 23:47:57,661 autoreload 50052 16872 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\views.py changed, reloading.
+INFO 2025-11-25 23:47:58,547 autoreload 25896 424 Watching for file changes with StatReloader
+INFO 2025-11-25 23:48:00,897 autoreload 25896 424 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\views.py changed, reloading.
+INFO 2025-11-25 23:48:01,914 autoreload 28720 49660 Watching for file changes with StatReloader
+INFO 2025-11-25 23:48:28,913 autoreload 28720 49660 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\sendpakket\settings.py changed, reloading.
+INFO 2025-11-25 23:48:30,088 autoreload 8916 28504 Watching for file changes with StatReloader
+INFO 2025-11-25 23:48:35,654 autoreload 8916 28504 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\core\models.py changed, reloading.
+INFO 2025-11-25 23:48:36,721 autoreload 2020 48220 Watching for file changes with StatReloader
+INFO 2025-11-25 23:48:40,119 autoreload 2020 48220 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\models.py changed, reloading.
+INFO 2025-11-25 23:48:41,282 autoreload 39812 13600 Watching for file changes with StatReloader
+INFO 2025-11-25 23:48:45,835 autoreload 39812 13600 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\views.py changed, reloading.
+INFO 2025-11-25 23:48:47,576 autoreload 51104 32288 Watching for file changes with StatReloader
+INFO 2025-11-25 23:48:52,293 autoreload 51104 32288 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\views.py changed, reloading.
+INFO 2025-11-25 23:48:53,697 autoreload 12888 13664 Watching for file changes with StatReloader
+INFO 2025-11-25 23:49:21,910 autoreload 12888 13664 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\views.py changed, reloading.
+INFO 2025-11-25 23:49:22,879 autoreload 19036 6924 Watching for file changes with StatReloader
+INFO 2025-11-25 23:49:28,629 autoreload 19036 6924 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\views.py changed, reloading.
+INFO 2025-11-25 23:49:30,063 autoreload 25024 34308 Watching for file changes with StatReloader
+INFO 2025-11-25 23:49:32,542 autoreload 25024 34308 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\views.py changed, reloading.
+INFO 2025-11-25 23:49:33,718 autoreload 27156 27724 Watching for file changes with StatReloader
+INFO 2025-11-25 23:49:45,027 autoreload 27156 27724 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\urls.py changed, reloading.
+INFO 2025-11-25 23:49:46,204 autoreload 30952 18104 Watching for file changes with StatReloader
+INFO 2025-11-25 23:49:49,754 autoreload 30952 18104 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\stripe_service.py changed, reloading.
+INFO 2025-11-25 23:49:50,730 autoreload 34576 50304 Watching for file changes with StatReloader
+ERROR 2025-11-25 23:50:19,556 log 40048 6664 Internal Server Error: /api/payments/shipment-transactions/
+Traceback (most recent call last):
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: payments.stripe_payment_intent_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\mixins.py", line 40, in list
+    page = self.paginate_queryset(queryset)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\generics.py", line 171, in paginate_queryset
+    return self.paginator.paginate_queryset(queryset, self.request, view=self)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\pagination.py", line 216, in paginate_queryset
+    return list(self.page)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\core\paginator.py", line 174, in __len__
+    return len(self.object_list)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\models\query.py", line 380, in __len__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+    )
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such column: payments.stripe_payment_intent_id
+ERROR 2025-11-25 23:50:19,837 log 40048 6664 Internal Server Error: /api/payments/shipment-transactions/1ee5285f-0e9b-438e-a183-bf82809d3386/mark_billed/
+Traceback (most recent call last):
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: payments.stripe_payment_intent_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\views.py", line 531, in mark_billed
+    transaction = self.get_object()
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\generics.py", line 96, in get_object
+    obj = get_object_or_404(queryset, **filter_kwargs)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\rest_framework\generics.py", line 19, in get_object_or_404
+    return _get_object_or_404(queryset, *filter_args, **filter_kwargs)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\shortcuts.py", line 85, in get_object_or_404
+    return queryset.get(*args, **kwargs)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\models\query.py", line 633, in get
+    num = len(clone)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\models\query.py", line 380, in __len__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+    )
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\samih\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such column: payments.stripe_payment_intent_id
+WARNING 2025-11-25 23:50:20,411 log 40048 6664 Bad Request: /api/payments/subscriptions/969541bf-df2b-4ec1-ac7a-5860d19a4984/cancel/
+WARNING 2025-11-25 23:50:57,620 log 40732 4392 Bad Request: /api/payments/payments/236ba576-93c4-4a1f-9f9c-2b49665781a6/refund/
+WARNING 2025-11-25 23:50:59,655 log 40732 4392 Bad Request: /api/payments/payments/53e3aefe-effb-4499-9b78-5f7460e74e86/process/
+WARNING 2025-11-25 23:51:01,032 log 40732 4392 Bad Request: /api/payments/subscriptions/6a1d8c15-901e-4bf4-8a6e-af784aa37756/cancel/
+INFO 2025-11-26 00:02:13,715 autoreload 34576 50304 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\sendpakket\settings.py changed, reloading.
+INFO 2025-11-26 00:02:14,878 autoreload 14352 34448 Watching for file changes with StatReloader
+INFO 2025-11-26 00:02:18,172 autoreload 14352 34448 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\sendpakket\urls.py changed, reloading.
+INFO 2025-11-26 00:02:19,049 autoreload 29600 25956 Watching for file changes with StatReloader
+INFO 2025-11-26 00:02:43,504 autoreload 29600 25956 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\platform_core\apps.py changed, reloading.
+INFO 2025-11-26 00:02:44,436 autoreload 51068 12160 Watching for file changes with StatReloader
+INFO 2025-11-26 00:02:49,806 autoreload 51068 12160 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\platform_core\apps.py changed, reloading.
+INFO 2025-11-26 00:02:50,575 autoreload 34736 21152 Watching for file changes with StatReloader
+INFO 2025-11-26 00:03:02,382 autoreload 34736 21152 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\platform_core\apps.py changed, reloading.
+INFO 2025-11-26 00:03:03,263 autoreload 42752 48664 Watching for file changes with StatReloader
+INFO 2025-11-26 00:03:17,268 autoreload 42752 48664 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\platform_core\apps.py changed, reloading.
+INFO 2025-11-26 00:03:18,459 autoreload 12156 21900 Watching for file changes with StatReloader
+INFO 2025-11-26 00:03:30,758 autoreload 12156 21900 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\platform_core\signals.py changed, reloading.
+INFO 2025-11-26 00:03:32,052 autoreload 40036 3028 Watching for file changes with StatReloader
+INFO 2025-11-26 00:04:17,986 autoreload 40036 3028 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\platform_core\signals.py changed, reloading.
+INFO 2025-11-26 00:04:18,933 autoreload 31452 29556 Watching for file changes with StatReloader
+INFO 2025-11-26 00:04:21,528 autoreload 31452 29556 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\platform_core\signals.py changed, reloading.
+INFO 2025-11-26 00:04:22,713 autoreload 23560 3880 Watching for file changes with StatReloader
+INFO 2025-11-26 00:04:26,388 autoreload 23560 3880 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\platform_core\signals.py changed, reloading.
+INFO 2025-11-26 00:04:27,400 autoreload 41152 19288 Watching for file changes with StatReloader
+INFO 2025-11-26 00:05:00,191 autoreload 41152 19288 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\platform_core\signals.py changed, reloading.
+INFO 2025-11-26 00:05:01,424 autoreload 30204 21228 Watching for file changes with StatReloader
+INFO 2025-11-26 00:05:22,264 autoreload 30204 21228 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\platform_core\models.py changed, reloading.
+INFO 2025-11-26 00:05:23,560 autoreload 35428 6524 Watching for file changes with StatReloader
+INFO 2025-11-26 00:05:50,861 autoreload 35428 6524 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\platform_core\services.py changed, reloading.
+INFO 2025-11-26 00:05:52,075 autoreload 11896 30696 Watching for file changes with StatReloader
+INFO 2025-11-26 00:06:06,514 autoreload 11896 30696 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\platform_core\signals.py changed, reloading.
+INFO 2025-11-26 00:06:07,618 autoreload 41216 33900 Watching for file changes with StatReloader
+INFO 2025-11-26 00:06:19,737 autoreload 41216 33900 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\platform_core\signals.py changed, reloading.
+INFO 2025-11-26 00:06:20,802 autoreload 424 5140 Watching for file changes with StatReloader
+INFO 2025-11-26 00:06:33,900 autoreload 424 5140 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\platform_core\signals.py changed, reloading.
+INFO 2025-11-26 00:06:34,815 autoreload 32160 17620 Watching for file changes with StatReloader
+INFO 2025-11-26 00:07:12,282 autoreload 32160 17620 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\platform_core\signals.py changed, reloading.
+INFO 2025-11-26 00:07:13,073 autoreload 15844 7120 Watching for file changes with StatReloader
+INFO 2025-11-26 00:11:17,782 autoreload 15844 7120 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\platform_core\models.py changed, reloading.
+INFO 2025-11-26 00:11:19,344 autoreload 11272 16924 Watching for file changes with StatReloader
+INFO 2025-11-26 00:11:21,992 autoreload 11272 16924 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\platform_core\models.py changed, reloading.
+INFO 2025-11-26 00:11:23,195 autoreload 7468 30208 Watching for file changes with StatReloader
+INFO 2025-11-26 00:11:28,766 autoreload 7468 30208 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\platform_core\models.py changed, reloading.
+INFO 2025-11-26 00:11:29,798 autoreload 48132 49176 Watching for file changes with StatReloader
+INFO 2025-11-26 00:11:32,132 autoreload 48132 49176 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\platform_core\models.py changed, reloading.
+INFO 2025-11-26 00:11:33,201 autoreload 25984 7072 Watching for file changes with StatReloader
+INFO 2025-11-26 00:11:39,756 autoreload 25984 7072 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\platform_core\models.py changed, reloading.
+INFO 2025-11-26 00:11:41,021 autoreload 47772 44416 Watching for file changes with StatReloader
+INFO 2025-11-26 00:11:44,681 autoreload 47772 44416 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\platform_core\models.py changed, reloading.
+INFO 2025-11-26 00:11:45,866 autoreload 12908 47540 Watching for file changes with StatReloader
+INFO 2025-11-26 00:11:48,442 autoreload 12908 47540 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\platform_core\models.py changed, reloading.
+INFO 2025-11-26 00:11:49,922 autoreload 36212 42152 Watching for file changes with StatReloader
+INFO 2025-11-26 00:11:52,532 autoreload 36212 42152 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\platform_core\models.py changed, reloading.
+INFO 2025-11-26 00:11:53,955 autoreload 44920 14868 Watching for file changes with StatReloader
+INFO 2025-11-26 00:11:57,851 autoreload 44920 14868 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\platform_core\models.py changed, reloading.
+INFO 2025-11-26 00:11:59,437 autoreload 14296 5780 Watching for file changes with StatReloader
+INFO 2025-11-26 00:12:02,997 autoreload 14296 5780 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\platform_core\models.py changed, reloading.
+INFO 2025-11-26 00:12:04,319 autoreload 6428 22844 Watching for file changes with StatReloader
+INFO 2025-11-26 00:12:08,602 autoreload 6428 22844 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\platform_core\models.py changed, reloading.
+INFO 2025-11-26 00:12:10,364 autoreload 39908 29316 Watching for file changes with StatReloader
+INFO 2025-11-26 00:12:19,844 autoreload 39908 29316 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\platform_core\services.py changed, reloading.
+INFO 2025-11-26 00:12:21,098 autoreload 28640 39516 Watching for file changes with StatReloader
+INFO 2025-11-26 00:12:31,485 autoreload 28640 39516 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\platform_core\services.py changed, reloading.
+INFO 2025-11-26 00:12:32,685 autoreload 33164 18960 Watching for file changes with StatReloader
+INFO 2025-11-26 00:12:40,576 autoreload 33164 18960 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\platform_core\services.py changed, reloading.
+INFO 2025-11-26 00:12:42,121 autoreload 6220 15472 Watching for file changes with StatReloader
+INFO 2025-11-26 00:12:48,040 autoreload 6220 15472 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\platform_core\services.py changed, reloading.
+INFO 2025-11-26 00:12:49,525 autoreload 49420 13092 Watching for file changes with StatReloader
+INFO 2025-11-26 00:12:53,577 autoreload 49420 13092 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\platform_core\services.py changed, reloading.
+INFO 2025-11-26 00:12:56,710 autoreload 17856 15164 Watching for file changes with StatReloader
+INFO 2025-11-26 00:13:00,846 autoreload 17856 15164 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\payments\webhooks.py changed, reloading.
+INFO 2025-11-26 00:13:02,933 autoreload 26384 32880 Watching for file changes with StatReloader
+INFO 2025-11-26 00:13:25,915 autoreload 26384 32880 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\platform_core\services.py changed, reloading.
+INFO 2025-11-26 00:13:27,659 autoreload 6140 31080 Watching for file changes with StatReloader
+INFO 2025-11-26 00:14:36,573 autoreload 6140 31080 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\platform_core\signals.py changed, reloading.
+INFO 2025-11-26 00:14:38,088 autoreload 29560 47640 Watching for file changes with StatReloader
+INFO 2025-11-26 00:14:42,877 autoreload 29560 47640 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\platform_core\signals.py changed, reloading.
+INFO 2025-11-26 00:14:44,229 autoreload 18916 40716 Watching for file changes with StatReloader
+INFO 2025-11-26 04:27:29,057 autoreload 18916 40716 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\platform_core\services.py changed, reloading.
+INFO 2025-11-26 04:27:31,245 autoreload 57468 26008 Watching for file changes with StatReloader
+INFO 2025-11-26 04:27:35,386 autoreload 57468 26008 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\platform_core\services.py changed, reloading.
+INFO 2025-11-26 04:27:36,788 autoreload 11416 47488 Watching for file changes with StatReloader
+INFO 2025-11-26 04:27:39,754 autoreload 11416 47488 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\platform_core\services.py changed, reloading.
+INFO 2025-11-26 04:27:41,535 autoreload 10564 6456 Watching for file changes with StatReloader
+INFO 2025-11-26 04:27:51,684 autoreload 10564 6456 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\platform_core\services.py changed, reloading.
+INFO 2025-11-26 04:27:53,550 autoreload 19824 52436 Watching for file changes with StatReloader
+INFO 2025-11-26 04:29:20,185 autoreload 19824 52436 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\platform_core\services.py changed, reloading.
+INFO 2025-11-26 04:29:21,115 autoreload 51912 52172 Watching for file changes with StatReloader
+INFO 2025-11-26 04:29:25,522 autoreload 51912 52172 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\platform_core\services.py changed, reloading.
+INFO 2025-11-26 04:29:26,571 autoreload 57824 27680 Watching for file changes with StatReloader
+WARNING 2025-11-26 04:30:39,423 log 57868 55756 Forbidden: /api/merchant-cores/
+WARNING 2025-11-26 04:30:43,834 log 57868 55756 Forbidden: /api/core-services/
+WARNING 2025-11-26 04:30:48,214 log 57868 55756 Forbidden: /api/platform-core/
+WARNING 2025-11-26 04:30:52,624 log 57868 55756 Forbidden: /api/core-events/
+WARNING 2025-11-26 04:30:57,028 log 57868 55756 Forbidden: /api/core-metrics/
+WARNING 2025-11-26 04:31:01,409 log 57868 55756 Forbidden: /api/core-configurations/
+WARNING 2025-11-26 04:31:29,549 log 57572 58152 Forbidden: /api/platform-core/
+INFO 2025-11-26 04:31:57,023 autoreload 57824 27680 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\core\permissions.py changed, reloading.
+INFO 2025-11-26 04:31:57,813 autoreload 53692 54740 Watching for file changes with StatReloader
+WARNING 2025-11-26 04:32:42,215 log 37512 50664 Method Not Allowed: /api/core-events/
+WARNING 2025-11-26 04:32:46,643 log 37512 50664 Method Not Allowed: /api/core-metrics/
+WARNING 2025-11-26 04:32:51,060 log 37512 50664 Bad Request: /api/core-configurations/
+WARNING 2025-11-26 04:33:52,284 log 51864 33256 Method Not Allowed: /api/core-configurations/set-value/
+INFO 2025-11-26 04:36:31,975 autoreload 53692 54740 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\platform_core\urls.py changed, reloading.
+INFO 2025-11-26 04:36:33,252 autoreload 54172 11132 Watching for file changes with StatReloader
+INFO 2025-11-26 04:40:30,717 autoreload 54172 11132 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\platform_core\urls.py changed, reloading.
+INFO 2025-11-26 04:40:32,227 autoreload 49928 22160 Watching for file changes with StatReloader
+INFO 2025-11-26 04:40:36,206 autoreload 49928 22160 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\platform_core\views.py changed, reloading.
+INFO 2025-11-26 04:40:37,659 autoreload 25584 54032 Watching for file changes with StatReloader
+INFO 2025-11-26 04:40:41,512 autoreload 25584 54032 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\platform_core\views.py changed, reloading.
+INFO 2025-11-26 04:40:42,814 autoreload 27936 55212 Watching for file changes with StatReloader
+INFO 2025-11-26 04:40:49,827 autoreload 27936 55212 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\platform_core\views.py changed, reloading.
+INFO 2025-11-26 04:40:50,984 autoreload 51668 27120 Watching for file changes with StatReloader
+INFO 2025-11-26 04:40:54,485 autoreload 51668 27120 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\platform_core\views.py changed, reloading.
+INFO 2025-11-26 04:40:55,752 autoreload 26684 40828 Watching for file changes with StatReloader
+INFO 2025-11-26 04:41:00,541 autoreload 26684 40828 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\platform_core\views.py changed, reloading.
+INFO 2025-11-26 04:41:02,084 autoreload 55932 22368 Watching for file changes with StatReloader
+INFO 2025-11-26 04:41:06,118 autoreload 55932 22368 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\platform_core\views.py changed, reloading.
+INFO 2025-11-26 04:41:07,555 autoreload 53196 54448 Watching for file changes with StatReloader
+INFO 2025-11-26 04:41:13,691 autoreload 53196 54448 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\platform_core\views.py changed, reloading.
+INFO 2025-11-26 04:41:15,006 autoreload 3580 35844 Watching for file changes with StatReloader
+INFO 2025-11-26 04:41:23,098 autoreload 3580 35844 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\platform_core\views.py changed, reloading.
+INFO 2025-11-26 04:41:24,330 autoreload 6916 51460 Watching for file changes with StatReloader
+INFO 2025-11-26 04:41:31,077 autoreload 6916 51460 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\platform_core\admin.py changed, reloading.
+INFO 2025-11-26 04:41:32,292 autoreload 52596 56148 Watching for file changes with StatReloader
+INFO 2025-11-26 04:41:38,066 autoreload 52596 56148 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\platform_core\admin.py changed, reloading.
+INFO 2025-11-26 04:41:39,225 autoreload 52568 23248 Watching for file changes with StatReloader
+INFO 2025-11-26 04:42:05,176 autoreload 52568 23248 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\platform_core\admin.py changed, reloading.
+INFO 2025-11-26 04:42:06,256 autoreload 48440 6064 Watching for file changes with StatReloader
+INFO 2025-11-26 04:42:09,705 autoreload 48440 6064 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\platform_core\admin.py changed, reloading.
+INFO 2025-11-26 04:42:10,910 autoreload 55352 32652 Watching for file changes with StatReloader
+INFO 2025-11-26 04:42:14,288 autoreload 55352 32652 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\platform_core\admin.py changed, reloading.
+INFO 2025-11-26 04:42:15,487 autoreload 57892 2360 Watching for file changes with StatReloader
+INFO 2025-11-26 04:42:19,984 autoreload 57892 2360 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\platform_core\admin.py changed, reloading.
+INFO 2025-11-26 04:42:21,325 autoreload 49860 47776 Watching for file changes with StatReloader
+INFO 2025-11-26 04:42:31,361 autoreload 49860 47776 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\platform_core\admin.py changed, reloading.
+INFO 2025-11-26 04:42:32,445 autoreload 57424 21828 Watching for file changes with StatReloader
+INFO 2025-11-26 04:43:26,438 autoreload 57424 21828 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\platform_core\serializers.py changed, reloading.
+INFO 2025-11-26 04:43:27,230 autoreload 16668 49884 Watching for file changes with StatReloader
+INFO 2025-11-26 04:43:32,622 autoreload 16668 49884 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\platform_core\serializers.py changed, reloading.
+INFO 2025-11-26 04:43:33,419 autoreload 25240 56456 Watching for file changes with StatReloader
+INFO 2025-11-26 04:43:37,713 autoreload 25240 56456 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\platform_core\serializers.py changed, reloading.
+INFO 2025-11-26 04:43:38,752 autoreload 40952 38628 Watching for file changes with StatReloader
+INFO 2025-11-26 04:43:41,996 autoreload 40952 38628 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\platform_core\serializers.py changed, reloading.
+INFO 2025-11-26 04:43:42,927 autoreload 53200 51220 Watching for file changes with StatReloader
+INFO 2025-11-26 04:43:46,185 autoreload 53200 51220 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\platform_core\serializers.py changed, reloading.
+INFO 2025-11-26 04:43:47,006 autoreload 54452 14732 Watching for file changes with StatReloader
+INFO 2025-11-26 04:43:50,303 autoreload 54452 14732 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\platform_core\serializers.py changed, reloading.
+INFO 2025-11-26 04:43:51,231 autoreload 55004 51348 Watching for file changes with StatReloader
+INFO 2025-11-26 04:43:53,431 autoreload 55004 51348 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\platform_core\serializers.py changed, reloading.
+INFO 2025-11-26 04:43:54,414 autoreload 49136 552 Watching for file changes with StatReloader
+INFO 2025-11-26 04:43:57,671 autoreload 49136 552 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\platform_core\serializers.py changed, reloading.
+INFO 2025-11-26 04:43:58,578 autoreload 22068 13276 Watching for file changes with StatReloader
+INFO 2025-11-26 04:44:00,808 autoreload 22068 13276 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\platform_core\serializers.py changed, reloading.
+INFO 2025-11-26 04:44:01,721 autoreload 2432 50076 Watching for file changes with StatReloader
+INFO 2025-11-26 04:44:04,195 autoreload 2432 50076 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\platform_core\serializers.py changed, reloading.
+INFO 2025-11-26 04:44:05,140 autoreload 19004 31240 Watching for file changes with StatReloader
+INFO 2025-11-26 04:44:07,423 autoreload 19004 31240 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\platform_core\serializers.py changed, reloading.
+INFO 2025-11-26 04:44:08,201 autoreload 37136 13100 Watching for file changes with StatReloader
+INFO 2025-11-26 04:44:10,416 autoreload 37136 13100 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\platform_core\serializers.py changed, reloading.
+INFO 2025-11-26 04:44:11,280 autoreload 50236 12848 Watching for file changes with StatReloader
+INFO 2025-11-26 04:44:13,490 autoreload 50236 12848 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\platform_core\serializers.py changed, reloading.
+INFO 2025-11-26 04:44:14,398 autoreload 41588 52176 Watching for file changes with StatReloader
+INFO 2025-11-26 04:52:53,128 autoreload 41588 52176 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\core\models.py changed, reloading.
+INFO 2025-11-26 04:52:54,252 autoreload 19720 52360 Watching for file changes with StatReloader
+INFO 2025-11-26 04:52:57,563 autoreload 19720 52360 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\core\models.py changed, reloading.
+INFO 2025-11-26 04:52:58,598 autoreload 11752 53496 Watching for file changes with StatReloader
+INFO 2025-11-26 04:56:10,452 autoreload 11752 53496 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\core\apps.py changed, reloading.
+INFO 2025-11-26 04:56:11,727 autoreload 49736 51728 Watching for file changes with StatReloader
+INFO 2025-11-26 04:56:23,118 autoreload 49736 51728 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\core\permissions.py changed, reloading.
+INFO 2025-11-26 04:56:24,186 autoreload 28136 54120 Watching for file changes with StatReloader
+INFO 2025-11-26 04:56:34,377 autoreload 28136 54120 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\platform_core\views.py changed, reloading.
+INFO 2025-11-26 04:56:35,345 autoreload 23248 54880 Watching for file changes with StatReloader
+INFO 2025-11-26 04:56:40,364 autoreload 23248 54880 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\platform_core\views.py changed, reloading.
+INFO 2025-11-26 04:56:41,336 autoreload 12148 23256 Watching for file changes with StatReloader
+INFO 2025-11-26 04:56:44,295 autoreload 12148 23256 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\platform_core\views.py changed, reloading.
+INFO 2025-11-26 04:56:45,289 autoreload 13428 21532 Watching for file changes with StatReloader
+INFO 2025-11-26 04:56:48,269 autoreload 13428 21532 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\platform_core\views.py changed, reloading.
+INFO 2025-11-26 04:56:49,247 autoreload 50760 57584 Watching for file changes with StatReloader
+INFO 2025-11-26 04:57:28,394 autoreload 50760 57584 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\core\signals.py changed, reloading.
+INFO 2025-11-26 04:57:29,437 autoreload 36788 54384 Watching for file changes with StatReloader
+INFO 2025-11-26 04:57:39,597 autoreload 36788 54384 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\core\signals.py changed, reloading.
+INFO 2025-11-26 04:57:40,622 autoreload 53808 56336 Watching for file changes with StatReloader
+INFO 2025-11-26 05:01:44,832 autoreload 53808 56336 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\core\signals.py changed, reloading.
+INFO 2025-11-26 05:01:45,801 autoreload 7224 47436 Watching for file changes with StatReloader
+INFO 2025-11-26 05:02:05,485 autoreload 7224 47436 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\core\signals.py changed, reloading.
+INFO 2025-11-26 05:02:06,487 autoreload 54772 15016 Watching for file changes with StatReloader
+WARNING 2025-11-26 05:07:17,708 log 53524 18648 Unauthorized: /api/shipping/shipments/
+WARNING 2025-11-26 05:08:00,797 log 49504 48328 Bad Request: /api/carriers/carriers/by_country/
+WARNING 2025-11-26 05:09:05,849 log 49504 48328 Bad Request: /api/carriers/pricing/calculate_rate/
+WARNING 2025-11-26 05:09:18,899 log 49504 48328 Bad Request: /api/carriers/services/by_carrier/
+WARNING 2025-11-26 05:16:41,484 log 49976 53664 Bad Request: /api/carriers/carriers/by_country/
+WARNING 2025-11-26 05:17:46,600 log 49976 53664 Bad Request: /api/carriers/pricing/calculate_rate/
+WARNING 2025-11-26 05:17:59,685 log 49976 53664 Bad Request: /api/carriers/services/by_carrier/
+WARNING 2025-11-26 05:21:50,708 log 49976 53664 Unauthorized: /api/shipping/shipments/
+WARNING 2025-11-26 05:23:49,508 log 54772 47396 Not Found: /
+WARNING 2025-11-26 05:23:49,510 basehttp 54772 47396 "GET / HTTP/1.1" 404 2943
+INFO 2025-11-26 05:23:56,707 basehttp 54772 57948 "GET /admin/ HTTP/1.1" 302 0
+INFO 2025-11-26 05:23:56,944 basehttp 54772 55964 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4181
+INFO 2025-11-26 05:24:42,387 autoreload 54772 15016 C:\Users\samih\Desktop\stuketborvat\borvat\send-pakket-platform\core\signals.py changed, reloading.
+INFO 2025-11-26 05:24:44,074 autoreload 54292 29848 Watching for file changes with StatReloader
+WARNING 2025-11-26 05:25:32,444 log 54292 6104 Not Found: /products/api/products/
+WARNING 2025-11-26 05:25:32,445 basehttp 54292 6104 "GET /products/api/products/ HTTP/1.1" 404 3027
+WARNING 2025-11-26 05:25:34,485 log 54292 5528 Not Found: /products/api/categories/
+WARNING 2025-11-26 05:25:34,485 basehttp 54292 5528 "GET /products/api/categories/ HTTP/1.1" 404 3033
+WARNING 2025-11-26 05:25:36,547 log 54292 12564 Not Found: /core/auth/register/
+WARNING 2025-11-26 05:25:36,548 basehttp 54292 12564 "POST /core/auth/register/ HTTP/1.1" 404 3019
+WARNING 2025-11-26 05:25:38,587 log 54292 57080 Not Found: /core/auth/login/
+WARNING 2025-11-26 05:25:38,587 basehttp 54292 57080 "POST /core/auth/login/ HTTP/1.1" 404 3010
+WARNING 2025-11-26 05:25:40,624 log 54292 10496 Not Found: /core/auth/profile/
+WARNING 2025-11-26 05:25:40,624 basehttp 54292 10496 "GET /core/auth/profile/ HTTP/1.1" 404 3015
+WARNING 2025-11-26 05:25:42,654 log 54292 39776 Not Found: /core/auth/logout/
+WARNING 2025-11-26 05:25:42,654 basehttp 54292 39776 "POST /core/auth/logout/ HTTP/1.1" 404 3013
+WARNING 2025-11-26 05:26:11,701 log 54292 52332 Not Found: /core/auth/login/
+WARNING 2025-11-26 05:26:11,702 basehttp 54292 52332 "GET /core/auth/login/ HTTP/1.1" 404 3009
+WARNING 2025-11-26 05:26:55,071 log 54292 11244 Not Found: /core/
+WARNING 2025-11-26 05:26:55,071 basehttp 54292 11244 "GET /core/ HTTP/1.1" 404 2976
+WARNING 2025-11-26 05:27:59,012 log 54292 13800 Not Found: /
+WARNING 2025-11-26 05:27:59,012 basehttp 54292 13800 "GET / HTTP/1.1" 404 2943
+WARNING 2025-11-26 05:28:17,670 log 54292 8672 Not Found: /
+WARNING 2025-11-26 05:28:17,671 basehttp 54292 8672 "GET / HTTP/1.1" 404 2943
+INFO 2025-11-26 05:28:23,509 basehttp 54292 8672 "GET /admin/ HTTP/1.1" 302 0
+INFO 2025-11-26 05:28:23,557 basehttp 54292 8672 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4181
+WARNING 2025-11-26 05:28:33,927 log 54292 8672 Not Found: /core/
+WARNING 2025-11-26 05:28:33,927 basehttp 54292 8672 "GET /core/ HTTP/1.1" 404 2976
+WARNING 2025-11-26 05:29:23,322 log 54292 56900 Not Found: /core/login/
+WARNING 2025-11-26 05:29:23,322 basehttp 54292 56900 "GET /core/login/ HTTP/1.1" 404 2994
+WARNING 2025-11-27 21:39:38,659 log 10428 4240 Not Found: /api/payments/subscriptions/82ee10d0-d08b-4284-b648-14e41f138616/
+WARNING 2025-11-27 21:39:38,666 log 10428 4240 Not Found: /api/shipping/shipments/13ee36c9-5c4e-4d57-9c8a-589f54ebdef4/
+WARNING 2025-11-27 21:44:20,376 log 22868 22880 Not Found: /api/payments/subscriptions/7ff98844-a479-4780-84e5-f80b65fb2080/
+WARNING 2025-11-27 21:44:20,383 log 22868 22880 Not Found: /api/shipping/shipments/00d99c97-9434-4794-bc63-01b3d34a3869/
+WARNING 2025-11-27 21:44:20,397 log 22868 22880 Not Found: /api/carriers/credentials/7cbe21fc-f71e-4f13-a97b-926a52e5902a/
+WARNING 2025-11-27 21:45:18,804 log 22868 22880 Forbidden: /api/merchant-cores/
+WARNING 2025-11-27 21:47:40,741 log 23016 18256 Not Found: /api/payments/subscriptions/540c5fa6-b33a-499d-8610-fb118ccf5ecf/
+WARNING 2025-11-27 21:47:40,748 log 23016 18256 Not Found: /api/shipping/shipments/ef0900af-1706-4a97-a886-0b2d41a66084/
+WARNING 2025-11-27 21:47:40,759 log 23016 18256 Not Found: /api/carriers/credentials/a75b29bc-c44f-4cf7-b0f4-4baeb8e329ea/
+WARNING 2025-11-27 21:47:40,763 log 23016 18256 Forbidden: /api/merchant-cores/9e392680-b0fd-4173-b53d-2c21dcc2ba4a/
+WARNING 2025-11-27 21:48:39,478 log 23016 18256 Forbidden: /api/merchant-cores/
+WARNING 2025-11-27 21:50:54,189 log 16756 4648 Not Found: /api/payments/subscriptions/61172589-7ab6-4faa-975b-00a202b611d1/
+WARNING 2025-11-27 22:00:06,785 log 20328 20500 Not Found: /api/payments/subscriptions/1ec2ee8e-1d8c-40c2-af44-9ada38ab4d5e/
+WARNING 2025-11-27 22:03:26,351 log 17644 22812 Not Found: /api/payments/subscriptions/6b37349b-448d-4459-b391-f953942a1c86/
+WARNING 2025-11-27 22:03:26,357 log 17644 22812 Not Found: /api/shipping/shipments/e5796fc5-bef2-4966-83df-4a94e13dfe88/
+WARNING 2025-11-27 22:03:26,366 log 17644 22812 Not Found: /api/carriers/credentials/c9991652-586f-44b8-b47b-3c56879b5c3a/
+WARNING 2025-11-27 22:03:26,372 log 17644 22812 Not Found: /api/merchant-cores/09b8d544-ea75-47b9-8f4d-8f7c9e43f784/
+WARNING 2025-11-27 22:05:13,127 log 23472 23008 Bad Request: /api/carriers/carriers/by_country/
+WARNING 2025-11-27 22:06:25,369 log 23472 23008 Bad Request: /api/carriers/pricing/calculate_rate/
+WARNING 2025-11-27 22:06:39,725 log 23472 23008 Bad Request: /api/carriers/services/by_carrier/
+WARNING 2025-11-27 22:10:50,032 log 23472 23008 Unauthorized: /api/shipping/shipments/
+WARNING 2025-11-27 22:16:31,873 log 15452 22456 Not Found: /api/payments/subscriptions/73cbeec2-00d2-4e21-9fb8-95562e495f23/
+WARNING 2025-11-27 22:16:31,878 log 15452 22456 Not Found: /api/shipping/shipments/4b72cf66-044f-4a8f-9e70-45a9c838f4a2/
+WARNING 2025-11-27 22:16:31,887 log 15452 22456 Not Found: /api/carriers/credentials/4f0c5959-969d-4e6d-8f3a-2ce8f728c031/
+WARNING 2025-11-27 22:16:31,894 log 15452 22456 Not Found: /api/merchant-cores/90cb1a3d-63b8-483d-94d5-90b07a545ad0/
+WARNING 2025-11-27 22:22:42,797 log 22360 21204 Not Found: /api/payments/subscriptions/664c1483-b171-4cb7-b1f9-a1400e064394/
+WARNING 2025-11-27 22:22:42,802 log 22360 21204 Not Found: /api/shipping/shipments/dbc52dfc-2fba-4287-af00-743f8cee6e68/
+WARNING 2025-11-27 22:22:42,809 log 22360 21204 Not Found: /api/carriers/credentials/e07ffe4b-46cd-4056-b3a1-d5e12d163d5a/
+WARNING 2025-11-27 22:22:42,816 log 22360 21204 Not Found: /api/merchant-cores/2e8d06ad-c380-45cc-aa39-76343e294cb3/
+WARNING 2025-11-27 22:23:14,648 log 13764 11708 Bad Request: /api/carriers/carriers/by_country/
+WARNING 2025-11-27 22:24:26,922 log 13764 11708 Bad Request: /api/carriers/pricing/calculate_rate/
+WARNING 2025-11-27 22:24:41,449 log 13764 11708 Bad Request: /api/carriers/services/by_carrier/
+WARNING 2025-11-27 22:29:06,689 log 13764 11708 Unauthorized: /api/shipping/shipments/

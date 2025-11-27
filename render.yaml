@@ -1,0 +1,53 @@
+services:
+  - type: web
+    name: sendpakket-api
+    runtime: python3
+    buildCommand: pip install -r requirements-prod.txt
+    startCommand: python manage.py migrate && python manage.py collectstatic --noinput && gunicorn sendpakket.wsgi:application --bind 0.0.0.0:$PORT --workers 4 --threads 4
+    envVars:
+      - key: DEBUG
+        value: False
+      - key: SECRET_KEY
+        generateValue: true
+      - key: DATABASE_URL
+        fromDatabase:
+          name: sendpakket-db
+          property: connectionString
+      - key: REDIS_URL
+        fromService:
+          type: redis
+          name: sendpakket-redis
+          property: connectionString
+      - key: ALLOWED_HOSTS
+        value: sendpakket-api.onrender.com
+      - key: CORS_ALLOWED_ORIGINS
+        value: https://sendpakket-api.onrender.com
+
+  - type: redis
+    name: sendpakket-redis
+    ipAllowList: []  # only accessible by other services
+
+  - type: pserv
+    name: sendpakket-worker
+    runtime: python3
+    buildCommand: pip install -r requirements-prod.txt
+    startCommand: celery -A sendpakket worker -l info --concurrency=2
+    envVars:
+      - key: DEBUG
+        value: False
+      - key: SECRET_KEY
+        generateValue: true
+      - key: DATABASE_URL
+        fromDatabase:
+          name: sendpakket-db
+          property: connectionString
+      - key: REDIS_URL
+        fromService:
+          type: redis
+          name: sendpakket-redis
+          property: connectionString
+
+databases:
+  - name: sendpakket-db
+    databaseName: sendpakket
+    user: sendpakket_user
